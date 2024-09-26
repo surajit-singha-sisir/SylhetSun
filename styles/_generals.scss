@@ -1,0 +1,20 @@
+@use "root" as *;
+
+body {
+    width: 100%;
+    font-family: 'SolaimanLipi', sans-serif;
+    color: var(--font-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--White);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}

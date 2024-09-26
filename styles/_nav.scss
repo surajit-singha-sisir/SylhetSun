@@ -1,0 +1,251 @@
+@use "root" as *;
+
+.navbar {
+    position: relative;
+
+    ul {
+        position: relative;
+    }
+
+    li {
+        border-radius: 50%;
+        width: 2rem;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--sub-div-color);
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--span-color);
+        }
+    }
+
+    a {
+        float: left;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+.b-bottom {
+    padding: 0.5px 0;
+    border-bottom: 2px solid var(--sub-div-color);
+}
+
+.top-shorts {
+    .top-short-story {
+        padding: 0.5rem 1rem;
+        color: var(--text-color);
+        border: 1px solid var(--sub-span-color);
+        border-left: 4px solid var(--sub-div-color);
+    }
+
+    .top-shorts-img {
+        width: auto;
+        height: 6rem;
+
+        .obj-fit-h {
+            border-radius: 0.5rem;
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            aspect-ratio: 4/3;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+    .top-shorts {
+        display: none !important;
+    }
+
+}
+
+.pos-t-center {
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+.nav-bar {
+    padding: 0;
+}
+
+.nav-overflow {
+    overflow: hidden;
+}
+
+.nav-bar div:nth-child(n + 1) {
+    margin-top: 0;
+    padding: 1rem;
+}
+
+
+.nav-toggle-bar {
+    img {
+        transition: all 0.3s ease;
+    }
+
+    ul {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.img-rotate-45 {
+    transform: rotate(-90deg);
+    transition: all 0.3s ease;
+}
+
+.nav-toggle-bar ul.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-toggle-bar img {
+    height: 1rem;
+    aspect-ratio: 1;
+}
+
+.hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    transition: all 0.3s ease-in-out;
+
+    span {
+        display: block;
+        width: 1.7rem;
+        height: 0.2rem;
+        background-color: white;
+    }
+
+}
+
+.hamb-rotate-1 {
+    position: absolute;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.hamb-rotate-2 {
+    opacity: 0;
+    transition: transform 0.3s ease;
+}
+
+.hamb-rotate-3 {
+    position: absolute;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+.hamb-container {
+    position: relative;
+    width: 100%;
+
+    ul {
+        max-height: 20rem;
+    }
+}
+
+.ham-sub-cat {
+    transition: all 0.2s ease;
+
+    li {
+        cursor: pointer;
+    }
+
+    li:hover {
+        color: var(--sub-div-darker);
+    }
+
+    img {
+        height: 1rem;
+        aspect-ratio: 1;
+    }
+}
+
+.hamb-shows {
+    ul {
+        flex-wrap: wrap;
+    }
+}
+
+.scroll-bar-sun::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.scroll-bar-sun::-webkit-scrollbar-track {
+    background: var(--div-color);
+}
+
+.scroll-bar-sun::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: var(--sub-div-color);
+}
+
+.scroll-bar-sun::-webkit-scrollbar-thumb:hover {
+    background: #806e6e;
+}
+
+
+@media screen and (max-width: 720px) {
+
+    .hamb-shows {
+        height: 82vh !important;
+
+
+        .hamb-container {
+            width: 100% !important;
+            max-height: 100% !important;
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+            ul {
+                width: inherit;
+                max-height: inherit !important;
+                flex-wrap: nowrap;
+
+                li {
+                    width: auto;
+                    a {
+                        padding-left: 0.5rem;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .nav-bar {
+        div {
+            section:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    .res-nav {
+        display: block;
+    }
+
+}
