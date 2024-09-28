@@ -14,7 +14,7 @@
     --text-color: #2F2F2F;
     --text-color-darker: #d8d8d8;
     --black: #2F2F2F;
-    --White: #fff;
+    --White: #dddddd;
     --Red: #ff0000;
     --cat-color: #10164D;
     --sub-text-color: #444444;
@@ -85,4 +85,10 @@
 }
 .sub-text-color {
     color: var(--sub-text-color);
+}
+// BORDER
+.b- {
+    &all {
+        border: 1px solid var(--border);
+    }
 }

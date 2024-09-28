@@ -12,7 +12,7 @@
   --text-color: #2F2F2F;
   --text-color-darker: #d8d8d8;
   --black: #2F2F2F;
-  --White: #fff;
+  --White: #dddddd;
   --Red: #ff0000;
   --cat-color: #10164D;
   --sub-text-color: #444444;
@@ -99,6 +99,10 @@
   color: var(--sub-text-color);
 }
 
+.b-all {
+  border: 1px solid var(--border);
+}
+
 body {
   width: 100%;
   font-family: "SolaimanLipi", sans-serif;
@@ -118,13 +122,11 @@ li {
   list-style-type: none;
 }
 
-.navbar {
-  position: relative;
+.overflow-hidden {
+  overflow: hidden;
 }
-.navbar ul {
-  position: relative;
-}
-.navbar li {
+
+.social-shares ul li {
   border-radius: 50%;
   width: 2rem;
   aspect-ratio: 1;
@@ -134,14 +136,93 @@ li {
   background-color: var(--sub-div-color);
   cursor: pointer;
 }
-.navbar li:hover {
+.social-shares ul li:hover {
   background-color: var(--span-color);
 }
-.navbar a {
-  float: left;
-  display: block;
-  text-align: center;
+.social-shares a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+}
+
+.obj-fit-h-res {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  width: auto;
+  aspect-ratio: 4/3;
+}
+
+.obj-fit-w-res {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+}
+
+.obj-fit-w-h {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/3;
+}
+
+.img-hover-scale {
+  transition: transform 0.3s ease-in-out;
+}
+.img-hover-scale:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.scroll-bar-sun::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.scroll-bar-sun::-webkit-scrollbar-track {
+  background: var(--div-color);
+}
+.scroll-bar-sun::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: var(--sub-div-color);
+}
+.scroll-bar-sun::-webkit-scrollbar-thumb:hover {
+  background: #806e6e;
+}
+
+.scroll-bar-sun-2::-webkit-scrollbar {
+  width: 0.2rem;
+}
+.scroll-bar-sun-2::-webkit-scrollbar-track {
+  background: var(--dark-color);
+}
+.scroll-bar-sun-2::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: var(--border);
+}
+.scroll-bar-sun-2::-webkit-scrollbar-thumb:hover {
+  background: #806e6e;
 }
 
 .b-bottom {
@@ -283,26 +364,9 @@ li {
   flex-wrap: wrap;
 }
 
-.scroll-bar-sun::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-.scroll-bar-sun::-webkit-scrollbar-track {
-  background: var(--div-color);
-}
-
-.scroll-bar-sun::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background: var(--sub-div-color);
-}
-
-.scroll-bar-sun::-webkit-scrollbar-thumb:hover {
-  background: #806e6e;
-}
-
 @media screen and (max-width: 720px) {
   .hamb-shows {
-    height: 82vh !important;
+    height: 87vh !important;
   }
   .hamb-shows .hamb-container {
     width: 100% !important;
@@ -327,4 +391,69 @@ li {
   .res-nav {
     display: block;
   }
+}
+.marquee-container marquee a {
+  font-size: var(--medium);
+  color: var(--text-color);
+  margin-right: 1em;
+}
+.marquee-container marquee a::before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: var(--text-color);
+  margin-right: 0.5em;
+  border-radius: 50%;
+}
+
+.img-responsive {
+  position: relative;
+  width: inherit;
+  height: auto;
+  overflow: hidden;
+}
+.img-responsive:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+.img-responsive img {
+  transition: all 0.3s ease-in-out;
+}
+
+.img-overlay {
+  margin-top: -10%;
+  padding: 1rem;
+  font-size: var(--semi-normal);
+}
+
+.lead-shares {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 20rem;
+  padding: 1rem;
+}
+.lead-shares ul {
+  list-style: none;
+  gap: 0.2rem;
+  width: 1.5rem !important;
+}
+.lead-shares ul li {
+  width: inherit !important;
+  aspect-ratio: 1;
+}
+.lead-shares ul li img {
+  width: 100%;
+  height: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.news-tops {
+  border: 1px solid var(--border);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

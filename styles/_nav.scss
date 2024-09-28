@@ -1,35 +1,5 @@
 @use "root" as *;
 
-.navbar {
-    position: relative;
-
-    ul {
-        position: relative;
-    }
-
-    li {
-        border-radius: 50%;
-        width: 2rem;
-        aspect-ratio: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--sub-div-color);
-        cursor: pointer;
-
-        &:hover {
-            background-color: var(--span-color);
-        }
-    }
-
-    a {
-        float: left;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-    }
-}
-
 .b-bottom {
     padding: 0.5px 0;
     border-bottom: 2px solid var(--sub-div-color);
@@ -56,6 +26,8 @@
         }
     }
 }
+
+
 
 @media screen and (max-width: 1080px) {
 
@@ -190,28 +162,12 @@
     }
 }
 
-.scroll-bar-sun::-webkit-scrollbar {
-    width: 0.5rem;
-}
-
-.scroll-bar-sun::-webkit-scrollbar-track {
-    background: var(--div-color);
-}
-
-.scroll-bar-sun::-webkit-scrollbar-thumb {
-    border-radius: 1rem;
-    background: var(--sub-div-color);
-}
-
-.scroll-bar-sun::-webkit-scrollbar-thumb:hover {
-    background: #806e6e;
-}
 
 
 @media screen and (max-width: 720px) {
 
     .hamb-shows {
-        height: 82vh !important;
+        height: 87vh !important;
 
 
         .hamb-container {
@@ -227,6 +183,7 @@
 
                 li {
                     width: auto;
+
                     a {
                         padding-left: 0.5rem;
                     }

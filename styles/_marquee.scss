@@ -1,0 +1,21 @@
+@use "root" as *;
+
+.marquee-container {
+    marquee {
+        a {
+            font-size: var(--medium);
+            color: var(--text-color);
+            margin-right: 1em;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 0.5em;
+                height: 0.5em;
+                background-color: var(--text-color);
+                margin-right: 0.5em;
+                border-radius: 50%;
+            }
+        }
+    }
+}
