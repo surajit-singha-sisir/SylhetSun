@@ -47,8 +47,58 @@
         }
     }
 }
+
 .news-tops {
     border: 1px solid var(--border);
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+}
+
+.sun-chirkut {
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    flex-direction: column;
+
+
+
+}
+
+.hr-border {
+    border-top: 1px solid var(--border);
+}
+
+.b-rad-50 {
+    border-radius: 50%;
+}
+
+.asp-r-1 {
+    aspect-ratio: 1;
+}
+
+.asp-r-4-3 {
+    aspect-ratio: 4/3;
+}
+
+.sun-quote-chirkut {
+    border-radius: 50%;
+    overflow: hidden;
+    max-height: auto;
+    width: 10rem;
+    aspect-ratio: 1;
+    border: 1px solid var(--sub-div-color);
+
+    img {
+        width: 100%;
+        height: 120%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.sun-top-article {
+    .sun-top-article-img {
+        flex: 1;
+        min-width: 10rem;
+        height: 4rem;
+    }
 }

@@ -17,16 +17,17 @@
         width: auto;
         height: 6rem;
 
-        .obj-fit-h {
-            border-radius: 0.5rem;
-            object-fit: cover;
-            object-position: center;
-            height: 100%;
-            aspect-ratio: 4/3;
-        }
+
     }
 }
 
+.obj-fit-h {
+    border-radius: 0.5rem;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    aspect-ratio: 4/3;
+}
 
 
 @media screen and (max-width: 1080px) {
