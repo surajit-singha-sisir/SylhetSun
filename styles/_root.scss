@@ -21,7 +21,7 @@
     --div-text-color: #ffffff;
     --span-text-color: #000;
     --sub-span-text-color: #000;
-    
+
     --xxs: 0.2rem;
     --xs: 0.5rem;
     --small: 0.8rem;
@@ -35,60 +35,81 @@
     --xl: 1.7rem;
     --xxl: 1.8rem;
     --xxxl: 2rem;
-    
+
     --transition: all 0.3s ease;
 }
+
 .bg-Background {
     background-color: var(--background);
 }
+
 .bg-Div {
     background-color: var(--div-color);
 }
+
 .bg-Sub-div {
     background-color: var(--sub-div-color);
 }
+
 .text-darker {
     color: var(--text-color-darker);
 }
+
 .bg-Sub-div-dark {
     background-color: var(--sub-div-darker);
 }
+
 .bg-Dark {
     background-color: var(--dark-color);
 }
+
 .bg-Span {
     background-color: var(--span-color);
 }
+
 .bg-Sub-span {
     background-color: var(--sub-span-color);
 }
+
 .bg-Sub-span {
     background-color: var(--sub-span-color);
 }
+
 .bg-Border {
     background-color: var(--border);
 }
+
 .text-color {
     color: var(--text-color);
 }
+
 .Black {
     color: var(--black);
 }
+
 .White {
     color: var(--white);
 }
+
 .bg-Navigation {
     background-color: var(--sub-div-color);
 }
+
 .bg-cat {
     background-color: var(--cat-color);
 }
+
 .sub-text-color {
     color: var(--sub-text-color);
 }
+
 // BORDER
 .b- {
     &all {
         border: 1px solid var(--border);
+    }
+
+    &dark {
+        border: 1px solid var(--dark-color);
     }
 }

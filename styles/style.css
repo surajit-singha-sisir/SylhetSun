@@ -102,6 +102,9 @@
 .b-all {
   border: 1px solid var(--border);
 }
+.b-dark {
+  border: 1px solid var(--dark-color);
+}
 
 body {
   width: 100%;
@@ -457,6 +460,7 @@ li {
   border-radius: 0.5rem;
   color: var(--text-color);
   flex-direction: column;
+  max-width: 25%;
 }
 
 .hr-border {
@@ -496,6 +500,15 @@ li {
   height: 4rem;
 }
 
+@media only screen and (max-width: 767px) {
+  .sun-quote-chirkut {
+    width: 10rem;
+  }
+  .sun-chirkut {
+    flex: 1;
+    max-width: 100%;
+  }
+}
 .md-container {
   position: relative;
 }
@@ -544,45 +557,44 @@ li {
   }
 }
 
-.g, .grid {
+.g,
+.grid {
   display: grid;
 }
 
-.g-container, .grid-container {
+.g-res-4-cols-container {
   display: grid;
-  max-width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  grid-gap: 1rem;
-  gap: 1rem;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
 }
-.g-container [class^=column], .grid-container [class^=column] {
-  grid-column: span 1;
-}
-.g-container [class*=span-1], .grid-container [class*=span-1] {
-  grid-column: span 1;
-}
-.g-container [class*=span-2], .grid-container [class*=span-2] {
+.g-res-4-cols-container [class*=span-2] {
+  background-color: blueviolet;
   grid-column: span 2;
 }
-.g-container [class*=span-3], .grid-container [class*=span-3] {
-  grid-column: span 3;
-}
-.g-container [class*=span-4], .grid-container [class*=span-4] {
-  grid-column: span 4;
-}
-.g-container [class*=span-5], .grid-container [class*=span-5] {
-  grid-column: span 5;
-}
-.g-container [class*=span-6], .grid-container [class*=span-6] {
-  grid-column: span 6;
-}
-.g-container [class*=column], .grid-container [class*=column] {
-  background-color: aqua;
-}
 @media only screen and (max-width: 1024px) {
-  .g-container [class*=span-], .grid-container [class*=span-] {
+  .g-res-4-cols-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .g-res-4-cols-container [class*=span]:last-child {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .g-res-4-cols-container {
+    grid-template-columns: 1fr;
+  }
+  .g-res-4-cols-container [class^=span-] {
     grid-column: span 1;
   }
+}
+
+.sun-latest-circle {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--sub-span-color);
 }
 
 /*# sourceMappingURL=style.css.map */
