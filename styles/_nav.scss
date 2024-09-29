@@ -138,6 +138,14 @@
     ul {
         max-height: 20rem;
     }
+
+    & a {
+        color: var(--White);
+        transition: all 0.3s ease-in-out;
+    }
+    & a:hover {
+        text-decoration: underline;
+    }
 }
 
 .ham-sub-cat {

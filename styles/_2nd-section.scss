@@ -11,11 +11,8 @@
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
 
-    & [class*="span-1"] {
-    }
-
     & [class*="span-2"] {
-        background-color: blueviolet;
+        // background-color: blueviolet;
         grid-column: span 2;
     }
 
@@ -34,11 +31,11 @@
         & {
             grid-template-columns: 1fr;
         }
+
         & [class ^="span-"] {
             grid-column: span 1;
         }
     }
-
 }
 
 .sun-latest-circle {
@@ -48,4 +45,43 @@
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: var(--sub-span-color);
+}
+
+.sun-cat-icon {
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    aspect-ratio: 1;
+    background-color: var(--div-color);
+}
+
+.see-all-btn {
+    position: relative;
+
+    &:hover h3 {
+        color: var(--Red);
+    }
+}
+
+.cat-news {
+    position: relative;
+}
+
+.sun-cat-feature-img-1 {
+    width: 10rem;
+
+    @include tablet {
+        & {
+            width: 100%;
+        }
+    }
+}
+
+.cat-sect-3-col {
+    position: relative;
+
+    & a:not(a:last-child) {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--dark-color);
+    }
 }

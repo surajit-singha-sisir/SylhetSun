@@ -1,0 +1,36 @@
+@use "mediaqueries" as *;
+@use "root" as *;
+
+
+.sun-last-thumb {
+    transition: all 0.3s ease-in-out;
+
+    h3 {
+        bottom: -100%;
+        background-color: var(--sub-span-color);
+        padding: 1rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    & a:hover {
+        text-decoration: underline !important;
+    }
+
+    &:hover h3 {
+        bottom: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+
+    @include tablet {
+
+        & {
+            height: 100%;
+        }
+    }
+}

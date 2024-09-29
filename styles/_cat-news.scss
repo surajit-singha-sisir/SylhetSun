@@ -1,0 +1,45 @@
+@use "mediaqueries" as *;
+@use "root" as *;
+
+.news-cat-sun {
+    position: relative;
+
+    @include tablet {
+        & {
+            padding: 1rem;
+            border: 1px solid var(--dark-color);
+        }
+
+        & .b-cat-right {
+            border: none;
+        }
+
+        & li:not(:last-child) {
+            border-bottom: 1px solid var(--dark-color);
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+.sun-cat-feature-img-2 {
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sun-title-added-cat {
+    position: relative;
+
+    @include laptop {
+
+        & .g-res-3-col-container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @include tablet {
+        & .g-res-3-col-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}

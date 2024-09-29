@@ -112,4 +112,18 @@
     &dark {
         border: 1px solid var(--dark-color);
     }
+
+    &bottom-sun {
+        border-bottom: 1px solid var(--dark-color);
+    }
+
+    &cat-color {
+        border: 1px solid var(--span-color);
+    }
+
+    &cat-right {
+        display: block;
+        height: 100%;
+        border-right: 1px solid var(--dark-color);
+    }
 }
