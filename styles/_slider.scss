@@ -56,3 +56,42 @@
         }
     }
 }
+
+.sun-binodon-cat {
+
+    @include laptop {
+        & {
+            grid-template-columns: 1fr 1fr !important;
+        }
+    }
+}
+
+.sun-footer-border {
+    border-top: 1px solid var(--border);
+}
+
+.sun-footer-right-border {
+    height: 100%;
+    width: 1px;
+    border-right: 1px solid var(--border);
+}
+
+.sun-footer {
+    aside {
+        padding-top: 1rem;
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .sun-popular-tags {
+        display: flex;
+        gap: 1rem;
+
+        li {
+            font-size: var(--semi-normal);
+            color: var(--light-color);
+        }
+    }
+}
