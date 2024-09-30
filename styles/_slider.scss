@@ -74,6 +74,12 @@
     height: 100%;
     width: 1px;
     border-right: 1px solid var(--border);
+
+    @include tablet {
+        & {
+            border-right: none;
+        }
+    }
 }
 
 .sun-footer {
@@ -85,13 +91,38 @@
         }
     }
 
-    .sun-popular-tags {
+    .sun-footer-des {
         display: flex;
         gap: 1rem;
 
         li {
             font-size: var(--semi-normal);
-            color: var(--light-color);
+            background-color: var(--sub-div-color);
+            padding: 0.2rem 0.5rem;
+            transition: background-color 0.1s ease-in-out;
+
+            a {
+                color: var(--text-color);
+                transition: color 0.1s ease-in-out;
+            }
+        }
+
+        li:hover {
+            background-color: var(--div-color);
+            transition: background-color 0.1s ease-in-out;
+
+            & a {
+                color: var(--White);
+                transition: color 0.1s ease-in-out;
+            }
+        }
+        h3 {
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border)
+        }
+        table {
+            font-weight: 600;
+            font-size: 1.1rem;
         }
     }
 }

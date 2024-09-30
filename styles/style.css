@@ -922,6 +922,11 @@ li {
   width: 1px;
   border-right: 1px solid var(--border);
 }
+@media only screen and (max-width: 768px) {
+  .sun-footer-right-border {
+    border-right: none;
+  }
+}
 
 .sun-footer aside {
   padding-top: 1rem;
@@ -929,13 +934,35 @@ li {
 .sun-footer aside a:hover {
   text-decoration: underline;
 }
-.sun-footer .sun-popular-tags {
+.sun-footer .sun-footer-des {
   display: flex;
   gap: 1rem;
 }
-.sun-footer .sun-popular-tags li {
+.sun-footer .sun-footer-des li {
   font-size: var(--semi-normal);
-  color: var(--light-color);
+  background-color: var(--sub-div-color);
+  padding: 0.2rem 0.5rem;
+  transition: background-color 0.1s ease-in-out;
+}
+.sun-footer .sun-footer-des li a {
+  color: var(--text-color);
+  transition: color 0.1s ease-in-out;
+}
+.sun-footer .sun-footer-des li:hover {
+  background-color: var(--div-color);
+  transition: background-color 0.1s ease-in-out;
+}
+.sun-footer .sun-footer-des li:hover a {
+  color: var(--White);
+  transition: color 0.1s ease-in-out;
+}
+.sun-footer .sun-footer-des h3 {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.sun-footer .sun-footer-des table {
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
