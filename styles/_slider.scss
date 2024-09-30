@@ -1,0 +1,58 @@
+@use "mediaqueries" as *;
+@use "root" as *;
+
+.slider-1fr {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease-in-out;
+
+
+    .items {
+        display: block;
+        width: 100%;
+        height: 15rem;
+        gap: 1rem;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+
+        .inner-item {
+            position: absolute;
+            width: 100%;
+            height: inherit;
+            cursor: pointer;
+            overflow: hidden;
+            top: 0;
+            transition: transform 0.5s ease-in-out;
+
+            img {
+                width: inherit;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .transform-in {
+            transform: translateY(100%);
+            z-index: 1;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .transform-out {
+            transform: translateY(-100%);
+            z-index: 1;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .active {
+            z-index: 2;
+            transform: translateY(0);
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+}

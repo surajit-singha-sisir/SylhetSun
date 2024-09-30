@@ -1560,6 +1560,52 @@
 
         <div class="local-padding"></div>
 
+        <section class="g-res-3-col-container gap-10 res-container m-auto">
+
+            <aside class="span-1">
+                <div class="f w-100 pad--10 bg-cat text-White text-hov-Green cur-pointer text--15 f-just-center">
+                    গ্যালারি</div>
+                <div class="slider-1fr">
+                    <div class="items">
+                        <span class="inner-item">
+                            <img src="https://dummyimage.com/1200x900" alt="">
+                        </span>
+                        <span class="inner-item">
+                            <img src="https://dummyimage.com/1200x900/addc" alt="">
+                        </span>
+                        <span class="inner-item">
+                            <img src="https://dummyimage.com/1200x900/2d1" alt="">
+                        </span>
+                        <span class="inner-item">
+                            <img src="https://dummyimage.com/1200x900/33d" alt="">
+                        </span>
+                        <span class="inner-item">
+                            <img src="https://dummyimage.com/1200x900/4bb" alt="">
+                        </span>
+                    </div>
+                </div>
+            </aside>
+
+            <aside class="span-2">
+                <div class="bengali-cat-news-list">
+                    <li class="bengali-list-num b-bottom-sun pad-b--10">
+                        <span class="left-vr-bar"></span>
+                        <div>
+                            <a href="#" class="text-color">
+                                <h3 class="text-dotted-2 pad-l--01">অনৈতিক কর্মকাণ্ডের অভিযোগে ভেঙে দেওয়া হলো
+                                    বিএনপির ঢাকা উত্তর কমিটি</h3>
+                            </a>
+                            <!-- TIMER -->
+                            <div class="f gap--05 f-align-items-center">
+                                <span class="w--08 h-100">
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </aside>
+        </section>
+
     </main>
 
 </body>
@@ -1667,12 +1713,43 @@
             }
         });
     }
-
-
-
-
-
     truncateTextAfterTwoLines(1.5);
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelectorAll('.items .inner-item');
+        let currentIndex = 0;
+        const totalItems = items.length;
+        const delay = 5000;
+        let sliderInterval;
+
+        items.forEach(item => {
+            item.classList.add('transform-out');
+        });
+
+        function moveToNextSlide() {
+            items[currentIndex].classList.remove('active');
+            items[currentIndex].classList.add('transform-out');
+            currentIndex = (currentIndex + 1) % totalItems;
+            items[currentIndex].classList.remove('transform-in', 'transform-out');
+            items[currentIndex].classList.add('active', 'transform-in');
+        }
+
+        items[currentIndex].classList.add('active');
+        sliderInterval = setInterval(moveToNextSlide, delay);
+
+        items.forEach(item => {
+            item.addEventListener('click', function () {
+                moveToNextSlide();
+                clearInterval(sliderInterval);
+                sliderInterval = setInterval(moveToNextSlide, delay);
+            });
+        });
+    });
+
+
+
 
 
 </script>
