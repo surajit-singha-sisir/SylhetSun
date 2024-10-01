@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sylhet Sun Index</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.0.0/mastors.css">
-    <script src="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.0.0/mastors.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.0.01/mastors.css">
+    <script src="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.0.01/mastors.js"></script>
     <link href="https://fonts.cdnfonts.com/css/solaimanlipi" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
@@ -267,79 +267,372 @@
                     </div>
 
                     <!-- TITLE -->
-                    <h1 class="text--20 pad-tb--05">লেবাননে স্থল অভিযান শুরু করেছে ইসরায়েলি বাহিনী</h1>
+                    <div class="sun-title-text">
+                        <span class="f gap-05 f-align-items-center" title="টাইটেল">
+                            <h3>ইসরায়েলি বাহিনী</h3>
+                            <span class="headingTitleCircle"></span>
+                        </span>
+                        <h1 class="text--20 pad-t--05">লেবাননে স্থল অভিযান শুরু করেছে ইসরায়েলি বাহিনী</h1>
+                    </div>
 
-                    <hgroup>
-                        <!-- SUBTITLE -->
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                        <!-- AUTHOR -->
-                        <p class="text-darker">লেবানন, আবেদনকারী</p>
-                        <!-- DATE -->
-                        <p></p>
-
-                        <!-- SOCIAL SHARE -->
-                        <div class="f-just-center f-align-items-center m-t--10 pad--07">
-                            <div class="f f-wrap gap-10">
-
-                                <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
-                                    <span class="share-wave">
-                                        <i class="socials fa-brands fa-facebook-f"></i>
-                                    </span>
-                                </span>
-                                <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
-                                    <span class="share-wave">
-                                        <i class="socials fa-brands fa-facebook-messenger"></i>
-                                    </span>
-                                </span>
-                                <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
-                                    <span class="share-wave">
-                                        <i class="socials fa-brands fa-whatsapp"></i>
-                                    </span>
-                                </span>
-                                <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
-                                    <span class="share-wave">
-                                        <i class="socials fa-brands fa-x-twitter"></i>
-                                    </span>
-                                </span>
-                                <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
-                                    <span class="share-wave">
-                                        <i class="socials fa-brands fa-linkedin"></i>
-                                    </span>
-                                </span>
-
-                                <button id="printButton" class="relative t-0 cur-pointer" onclick="print()">
-                                    <span class="share-wave">
-                                        <i class="socials fa-solid fa-print"></i>
-                                    </span>
-                                </button>
-                                <button class="relative t-0 plus-btn cur-pointer" onclick="plusButton()">
-                                    <span class="share-wave">
-                                        <i class="socials fa-solid fa-plus"></i>
-                                    </span>
-                                </button>
-                                <button class="relative t-0 minus-btn cur-pointer" onclick="minusButton()">
-                                    <span class="share-wave">
-                                        <i class="socials fa-solid fa-minus"></i>
-                                    </span>
-                                </button>
-                            </div>
+                    <hgroup class="z-5 sticky t--35 f gap-10 pad-b--15 f-wrap f-just-between f-align-items-center"
+                        id="onstickychange">
+                        <!-- PROTIBEDOK -->
+                        <div class="f f-col" id="onstickyhide">
+                            <!-- SUBTITLE -->
+                            <span class="f gap-05">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                                <p>নিজস্ব প্রতিবেদন</p>
+                            </span>
+                            <!-- AUTHOR AND TIME -->
+                            <span class="time-color f gap-05">
+                                <p>প্রকাশ :</p>
+                                <time datetime="15-10-2024">১৫ই অক্টোবর, ২০২৪</time>
+                                <p>|</p>
+                                <time datetime="18:28">সন্ধ্যা ৬:২৮</time>
+                            </span>
                         </div>
+                        <!-- SOCIAL SHARE -->
+                        <div class="f f-wrap gap-10 f-just-center f-align-items-center" id="sun-social-shares">
 
+                            <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
+                                <span class="share-wave">
+                                    <i class="socials fa-brands fa-facebook-f"></i>
+                                </span>
+                            </span>
+                            <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
+                                <span class="share-wave">
+                                    <i class="socials fa-brands fa-facebook-messenger"></i>
+                                </span>
+                            </span>
+                            <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
+                                <span class="share-wave">
+                                    <i class="socials fa-brands fa-whatsapp"></i>
+                                </span>
+                            </span>
+                            <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
+                                <span class="share-wave">
+                                    <i class="socials fa-brands fa-x-twitter"></i>
+                                </span>
+                            </span>
+                            <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
+                                <span class="share-wave">
+                                    <i class="socials fa-brands fa-linkedin"></i>
+                                </span>
+                            </span>
+
+                            <!-- ACTION FUNCTIONALITIES -->
+                            <span id="printButton" class="relative t-0 cur-pointer" onclick="print()">
+                                <span class="share-wave">
+                                    <i class="socials fa-solid fa-print"></i>
+                                </span>
+                            </span>
+                            <span class="relative t-0 plus-btn cur-pointer" onclick="plusButton()">
+                                <span class="share-wave">
+                                    <i class="socials fa-solid fa-plus"></i>
+                                </span>
+                            </span>
+                            <span class="relative t-0 minus-btn cur-pointer" onclick="minusButton()">
+                                <span class="share-wave">
+                                    <i class="socials fa-solid fa-minus"></i>
+                                </span>
+                            </span>
+                        </div>
                     </hgroup>
 
+                    <!-- THUMBNAIL -->
+                    <div class="relative w-80 m-auto f f-col pad-b--10">
+                        <img class="img-w-res"
+                            src="https://images.prothomalo.com/prothomalo-bangla%2F2024-09-24%2Fk8k3442a%2Fhostages.jpg"
+                            alt="">
+                        <span class="w-100 bg-cat text-center pad--05 text-hov-Red cur-pointer text-White text--12">কেউ
+                            বাড়ি ফিরতে চান, কেউ চান নেতানিয়াহুর পতন</span>
+                    </div>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias necessitatibus dolorem accusantium
-                        eius consequatur, non nisi est magni suscipit exercitationem consequuntur quisquam recusandae,
-                        nobis vitae doloribus sit ab? Perferendis, recusandae!</p>
+                    <!-- ARTICLE -->
+                    <article id="article" class="text-color">
+                        লেবাননের দক্ষিণাঞ্চলের গ্রামগুলোতে ‘সুনির্দিষ্ট লক্ষ্যবস্তুতে’ স্থল অভিযান শুরু করেছে ইসরায়েল।
+                        দেশটির সেনাবাহিনী এক বিবৃতিতে আজ মঙ্গলবার এ তথ্য জানিয়েছে।
+
+                        বিবৃতিতে বলা হয়েছে, দক্ষিণ লেবাননের সীমান্ত-সংলগ্ন গ্রামগুলোয় হিজবুল্লাহর লক্ষ্যবস্তুতে কয়েক
+                        ঘণ্টা আগে বিমান হামলা চালানো হয়েছে। একই সঙ্গে সেখানে স্থল বাহিনী প্রবেশ করেছে।
+
+                        ইসরায়েলি রাজনৈতিক নেতাদের অনুমোদনের পরপরই লেবাননে স্থল অভিযান চালাল দেশটির সামরিক বাহিনী। এর
+                        মধ্য দিয়ে লেবাননে ইরান-সমর্থিত সশস্ত্র গোষ্ঠী হিজবুল্লাহর বিরুদ্ধে ইসরায়েলের লড়াই নতুন মাত্রা
+                        পেল।
+
+                        হিজবুল্লাহর সঙ্গে ইসরায়েলের বিরোধ বেশ পুরোনো। তবে গত বছরের অক্টোবরে ইসরায়েলি বাহিনী ফিলিস্তিনের
+                        গাজায় সর্বাত্মক যুদ্ধ শুরু করলে এই বিরোধ আরও জোরালো হয়ে ওঠে। এর পর থেকে ইসরায়েলের ভূখণ্ডে স্বল্প
+                        পরিসরের হামলা চালিয়ে আসছিল হিজবুল্লাহ। ইসরায়েলও পাল্টা জবাব দিচ্ছিল।
+
+                        ইসরায়েলের সাবেক বিচারমন্ত্রী ইয়োসি বেলিন তেল আবিব থেকে আল-জাজিরাকে বলেন, ‘আমি আশা করি, আমরা ছোট
+                        পরিসরে স্থল অভিযানের বিষয়ে কথা বলছি।’
+
+                        এর কারণ ব্যাখ্যা করতে গিয়ে ইসরায়েলের সাবেক এই মন্ত্রী বলেন, ‘অতীতের অভিজ্ঞতা থেকে আমরা জানি, এটা
+                        নিয়ন্ত্রণ করা খুবই জটিল একটি কর্মকাণ্ড। ইসরায়েল সরকার যদি সত্যি সত্যি হিজবুল্লাহ যোদ্ধাদের
+                        কর্মকাণ্ড সীমিত করে আনা এবং উত্তরাঞ্চলে ইসরায়েলিদের নিজ গ্রামে ফিরে যেতে দেওয়ার মূল লক্ষ্য
+                        অর্জনের জন্য আন্তরিক হয়; তাহলে এটা (স্থল অভিযান) সীমিত পরিসরের হতে হবে।’
+
+                        এর আগে গতকাল সোমবার মার্কিন কর্মকর্তাদের বরাতে সিএনএনের খবরে বলা হয়, ইসরায়েলের সামরিক বাহিনী
+                        লেবাননের দক্ষিণের সীমান্তবর্তী অঞ্চলে সোমবার সকালে ছোট পরিসরে বিশেষ ‘অভিযান’ পরিচালনা করেছেন।
+                        তাঁদের একজন বলেন, ‘খুবই ছোট আকারে সুনির্দিষ্ট লক্ষ্যবস্তু কেন্দ্র করে অভিযান চালানো হয়েছে।
+                        বিষয়টা এমন—আপনি সীমানা পেরিয়ে গিয়ে অভিযান চালিয়ে আবার ফিরে এসেছেন।’
+
+                        পরে যুক্তরাষ্ট্রের পররাষ্ট্র মন্ত্রণালয়ের মুখপাত্র ম্যাথিউ মিলার বলেন, লেবাননে অভিযানের বিষয়ে
+                        যুক্তরাষ্ট্রকে অবহিত করেছে ইসরায়েল। তিনি বলেন, সীমান্ত এলাকায় হিজবুল্লাহর লক্ষ্যবস্তুতে ছোট
+                        পরিসরে অভিযান চালানো হয়েছে।
+
+                        গত সপ্তাহে রাজধানী বৈরুতসহ লেবাননের বিভিন্ন জায়গায় হিজবুল্লাহর বিরুদ্ধে জোরালো হামলা চালিয়ে আসছে
+                        ইসরায়েলি বাহিনী। গত শুক্রবার বৈরুতের দক্ষিণে হামলায় নিহত হয়েছেন হিজবুল্লাহপ্রধান হাসান
+                        নাসরুল্লাহ।
+
+                        ইসরায়েলি হামলার মুখে লেবাননে ইতিমধ্যে ১০ লাখের বেশি মানুষ বাস্তুচ্যুত হয়েছেন। ইসরায়েলের স্থল
+                        হামলা মোকাবিলায় নিজেদের প্রস্তুতির কথা জানিয়েছে হিজবুল্লাহ।
+
+                        এদিকে ফিলিস্তিনি কর্মকর্তাদের বরাতে বিবিসির খবর, লেবাননের সবচেয়ে বড় আইন আল-হিলওয়েহ
+                        শরণার্থীশিবিরে বিমান হামলা চালিয়েছেন ইসরায়েলি বাহিনী। ফিলিস্তিনি গোষ্ঠী ফাতাহর সশস্ত্র শাখা ছিল
+                        এ হামলার লক্ষ্যবস্তু।
+                    </article>
 
                 </section>
             </aside>
 
             <aside class="span-1">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis sed blanditiis esse quo expedita
-                maxime eos minima numquam sapiente obcaecati sint laudantium distinctio voluptatibus voluptatum, veniam
-                suscipit ipsa eveniet natus!
+                <p class="text--15 m-t---05 pad-b--05">আপনার পছন্দের নিউজ -</p>
+                <span class="f b-bottom-sun pad-t--03"></span>
+                <ul class="pad--05 b-all-sun">
+                    <!-- NEWS -->
+                    <li class="b-bottom-sun pad-tb--05">
+                        <a href="#" class="f gap-05 text-color">
+                            <div class="f-flex-1">
+                                <!-- HEADING -->
+                                <h3 class="link-hov-u">হামলার পরিধি বাড়াচ্ছে ইসরায়েল, লেবানন সীমান্তে বিশেষ অভিযান</h3>
+                                <!-- TIMER -->
+                                <div class="f gap--05 f-just-start f-align-items-center">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                            <span class="d-block f-flex-1 sun-res-img-width">
+                                <img class="img-w-res"
+                                    src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-01%2Fnggbsvju%2FRizvi.jpeg"
+                                    alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <!-- NEWS -->
+                    <li class="b-bottom-sun pad-tb--05">
+                        <a href="#" class="f gap-05 text-color">
+                            <div class="f-flex-1">
+                                <!-- HEADING -->
+                                <h3 class="link-hov-u">হামলার পরিধি বাড়াচ্ছে ইসরায়েল, লেবানন সীমান্তে বিশেষ অভিযান</h3>
+                                <!-- TIMER -->
+                                <div class="f gap--05 f-just-start f-align-items-center">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                            <span class="d-block f-flex-1 sun-res-img-width">
+                                <img class="img-w-res"
+                                    src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-01%2Fnggbsvju%2FRizvi.jpeg"
+                                    alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <!-- NEWS -->
+                    <li class="b-bottom-sun pad-tb--05">
+                        <a href="#" class="f gap-05 text-color">
+                            <div class="f-flex-1">
+                                <!-- HEADING -->
+                                <h3 class="link-hov-u">হামলার পরিধি বাড়াচ্ছে ইসরায়েল, লেবানন সীমান্তে বিশেষ অভিযান</h3>
+                                <!-- TIMER -->
+                                <div class="f gap--05 f-just-start f-align-items-center">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                            <span class="d-block f-flex-1 sun-res-img-width">
+                                <img class="img-w-res"
+                                    src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-01%2Fnggbsvju%2FRizvi.jpeg"
+                                    alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <!-- NEWS -->
+                    <li class="b-bottom-sun pad-tb--05">
+                        <a href="#" class="f gap-05 text-color">
+                            <div class="f-flex-1">
+                                <!-- HEADING -->
+                                <h3 class="link-hov-u">হামলার পরিধি বাড়াচ্ছে ইসরায়েল, লেবানন সীমান্তে বিশেষ অভিযান</h3>
+                                <!-- TIMER -->
+                                <div class="f gap--05 f-just-start f-align-items-center">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                            <span class="d-block f-flex-1 sun-res-img-width">
+                                <img class="img-w-res"
+                                    src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-01%2Fnggbsvju%2FRizvi.jpeg"
+                                    alt="">
+                            </span>
+                        </a>
+                    </li>
+                    <!-- NEWS -->
+                    <li class="b-bottom-sun pad-tb--05">
+                        <a href="#" class="f gap-05 text-color">
+                            <div class="f-flex-1">
+                                <!-- HEADING -->
+                                <h3 class="link-hov-u">হামলার পরিধি বাড়াচ্ছে ইসরায়েল, লেবানন সীমান্তে বিশেষ অভিযান</h3>
+                                <!-- TIMER -->
+                                <div class="f gap--05 f-just-start f-align-items-center">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                            <span class="d-block f-flex-1 sun-res-img-width">
+                                <img class="img-w-res"
+                                    src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-01%2Fnggbsvju%2FRizvi.jpeg"
+                                    alt="">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </aside>
+        </section>
+
+        <div class="local-padding"></div>
+
+        <section class="res-container m-auto">
+            <span class="f gap--05">
+                <a href="#">
+                    <h2 class="sun-cat-name-u">সিলেট</h2>
+                </a>
+                <p class="text--15">থেকে আরও পড়ুন -</p>
+            </span>
+
+            <div class="pad-tb--10">
+                <ul class="f gap-10 f-wrap">
+                    <li class="f-flex-1">
+                        <a href="#" class="text-color">
+                            <span class="d-block max-w--150 min-w--100 h-auto">
+                                <img class="w-100 h-auto"
+                                    src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-01%2Fqhne0uw8%2FYounus-Wakar.jpg"
+                                    alt="">
+                            </span>
+                            <div class="pad-t--05">
+                                <!-- HEADING -->
+                                <h3 class="text-dotted-4 pad-l--01 link-hov-u">প্রধান উপদেষ্টার সঙ্গে সেনাপ্রধানের
+                                    সাক্ষাৎ</h3>
+                                <!-- TIMER -->
+                                <div class="f gap--05 f-just-start f-align-items-center">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="f-flex-1">
+                        <a href="#" class="text-color">
+                            <span class="d-block max-w--150 min-w--100 h-auto">
+                                <img class="w-100 h-auto"
+                                    src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-01%2Fqhne0uw8%2FYounus-Wakar.jpg"
+                                    alt="">
+                            </span>
+                            <div class="pad-t--05">
+                                <!-- HEADING -->
+                                <h3 class="text-dotted-4 pad-l--01 link-hov-u">প্রধান উপদেষ্টার সঙ্গে সেনাপ্রধানের
+                                    সাক্ষাৎ</h3>
+                                <!-- TIMER -->
+                                <div class="f gap--05 f-just-start f-align-items-center">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="f-flex-1">
+                        <a href="#" class="text-color">
+                            <span class="d-block max-w--150 min-w--100 h-auto">
+                                <img class="w-100 h-auto"
+                                    src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-01%2Fqhne0uw8%2FYounus-Wakar.jpg"
+                                    alt="">
+                            </span>
+                            <div class="pad-t--05">
+                                <!-- HEADING -->
+                                <h3 class="text-dotted-4 pad-l--01 link-hov-u">প্রধান উপদেষ্টার সঙ্গে সেনাপ্রধানের
+                                    সাক্ষাৎ</h3>
+                                <!-- TIMER -->
+                                <div class="f gap--05 f-just-start f-align-items-center">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="f-flex-1">
+                        <a href="#" class="text-color">
+                            <span class="d-block max-w--150 min-w--100 h-auto">
+                                <img class="w-100 h-auto"
+                                    src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-01%2Fqhne0uw8%2FYounus-Wakar.jpg"
+                                    alt="">
+                            </span>
+                            <div class="pad-t--05">
+                                <!-- HEADING -->
+                                <h3 class="text-dotted-4 pad-l--01 link-hov-u">প্রধান উপদেষ্টার সঙ্গে সেনাপ্রধানের
+                                    সাক্ষাৎ</h3>
+                                <!-- TIMER -->
+                                <div class="f gap--05 f-just-start f-align-items-center">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="f-flex-1">
+                        <a href="#" class="text-color">
+                            <span class="d-block max-w--150 min-w--100 h-auto">
+                                <img class="w-100 h-auto"
+                                    src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-01%2Fqhne0uw8%2FYounus-Wakar.jpg"
+                                    alt="">
+                            </span>
+                            <div class="pad-t--05">
+                                <!-- HEADING -->
+                                <h3 class="text-dotted-4 pad-l--01 link-hov-u">প্রধান উপদেষ্টার সঙ্গে সেনাপ্রধানের
+                                    সাক্ষাৎ</h3>
+                                <!-- TIMER -->
+                                <div class="f gap--05 f-just-start f-align-items-center">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <div class="local-padding"></div>
@@ -596,7 +889,58 @@
 
     }
 
+    // INCREASE FONT SIZE
+    function plusButton() {
+        const article = document.getElementById('article');
+        const fontSize = parseFloat(window.getComputedStyle(article).getPropertyValue('font-size'));
 
+        if (fontSize >= 32) {
+            alert("Maximum font size reached.");
+        } else {
+            article.style.fontSize = (fontSize + 1) + 'px';
+        }
+    }
+
+    // DECREASE FONT SIZE
+    function minusButton() {
+        const article = document.getElementById('article');
+        const fontSize = parseFloat(window.getComputedStyle(article).getPropertyValue('font-size'));
+
+        if (fontSize <= 14) {
+            alert("Minimum font size reached.");
+        } else {
+            article.style.fontSize = (fontSize - 1) + 'px';
+        }
+    }
+
+    print = console.log;
+    function onstickyhide() {
+        const hideContainer = document.getElementById('onstickyhide');
+        const onstickychange = document.getElementById('onstickychange');
+        const sunsocialshares = document.getElementById('sun-social-shares');
+
+        window.addEventListener('scroll', function () {
+            const currentHeight = window.pageYOffset;
+
+            if (currentHeight > 500) {
+                hideContainer.classList.add('hide');
+                onstickychange.classList.remove('f-just-between');
+                onstickychange.classList.add('f-just-center');
+                sunsocialshares.classList.add('w-100', 'bg-White', 'pad--10');
+                sunsocialshares.style.transition = 'all 0.3s ease-in-out';
+
+            } else {
+                hideContainer.classList.remove('hide');
+                onstickychange.classList.add('f-just-between');
+                onstickychange.classList.remove('f-just-center');
+                sunsocialshares.classList.remove('w-100', 'bg-White', 'pad--10');
+            }
+        });
+
+
+
+    }
+    onstickyhide();
 </script>
 
 </html>

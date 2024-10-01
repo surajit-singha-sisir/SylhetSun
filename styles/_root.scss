@@ -98,9 +98,11 @@
 .bg-cat {
     background-color: var(--cat-color);
 }
+
 .text-cat {
     color: var(--cat-color);
 }
+
 .cat-hov-u {
     &:hover {
         text-decoration: underline;
@@ -115,6 +117,10 @@
 .b- {
     &all {
         border: 1px solid var(--border);
+    }
+
+    &all-sun {
+        border: 1px solid var(--dark-color);
     }
 
     &dark {
