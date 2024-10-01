@@ -81,7 +81,26 @@
     position: relative;
 
     & a:not(a:last-child) {
-        padding-bottom: 1rem;
+        padding-bottom: 0.2rem;
         border-bottom: 1px solid var(--dark-color);
     }
+}
+
+.sorboses-news {
+    position: relative;
+    max-height: 35rem;
+
+    @include desktop-l {
+        & {
+            max-height: 43rem;
+        }
+    }
+
+    @include desktop {
+        & {
+            max-height: 35rem;
+        }
+    }
+
+
 }

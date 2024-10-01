@@ -41,6 +41,12 @@
 }
 
 @mixin desktop {
+    @include mediaqueries(1920px) {
+        @content;
+    }
+}
+
+@mixin desktop-l {
     @include mediaqueries(2560px) {
         @content;
     }

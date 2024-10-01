@@ -95,6 +95,14 @@
   background-color: var(--cat-color);
 }
 
+.text-cat {
+  color: var(--cat-color);
+}
+
+.cat-hov-u:hover {
+  text-decoration: underline;
+}
+
 .sub-text-color {
   color: var(--sub-text-color);
 }
@@ -690,8 +698,23 @@ li {
   position: relative;
 }
 .cat-sect-3-col a:not(a:last-child) {
-  padding-bottom: 1rem;
+  padding-bottom: 0.2rem;
   border-bottom: 1px solid var(--dark-color);
+}
+
+.sorboses-news {
+  position: relative;
+  max-height: 35rem;
+}
+@media only screen and (max-width: 2560px) {
+  .sorboses-news {
+    max-height: 43rem;
+  }
+}
+@media only screen and (max-width: 1920px) {
+  .sorboses-news {
+    max-height: 35rem;
+  }
 }
 
 .news-cat-sun {
@@ -963,6 +986,43 @@ li {
 .sun-footer .sun-footer-des table {
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+.share-wave {
+  background-color: #E8E8E8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.share-wave::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00273F;
+  transition: bottom 0.5s ease-in-out;
+}
+.share-wave:hover::after {
+  bottom: 0;
+  color: white;
+}
+.share-wave:active::after {
+  background-color: red;
+}
+.share-wave i {
+  color: var(--cat-color);
+}
+.share-wave:hover i {
+  color: #fff;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

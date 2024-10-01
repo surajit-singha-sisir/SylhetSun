@@ -1,0 +1,44 @@
+@use "mediaqueries" as *;
+@use "root" as *;
+
+.share-wave {
+    background-color: #E8E8E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #00273F;
+        transition: bottom 0.5s ease-in-out;
+    }
+
+    &:hover::after {
+        bottom: 0;
+        color: white;
+    }
+
+    &:active::after {
+        background-color: red;
+    }
+
+    i {
+        color: var(--cat-color);
+    }
+
+    &:hover i {
+        color: #fff;
+        z-index: 1;
+    }
+}

@@ -98,6 +98,14 @@
 .bg-cat {
     background-color: var(--cat-color);
 }
+.text-cat {
+    color: var(--cat-color);
+}
+.cat-hov-u {
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 .sub-text-color {
     color: var(--sub-text-color);
