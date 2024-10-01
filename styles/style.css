@@ -1103,4 +1103,20 @@ article {
   }
 }
 
+.social-shares-gradient {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to bottom, #fff 70%, rgba(255, 255, 255, 0));
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 320px) {
+  .sun-social-shares {
+    gap: 0.2rem !important;
+  }
+  .sun-social-shares .share-wave i {
+    font-size: 0.7rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

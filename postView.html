@@ -293,7 +293,7 @@
                             </span>
                         </div>
                         <!-- SOCIAL SHARE -->
-                        <div class="f f-wrap gap-10 f-just-center f-align-items-center" id="sun-social-shares">
+                        <div class="f f-wrap gap-05 f-just-center f-align-items-center sun-social-shares" id="sun-social-shares">
 
                             <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
                                 <span class="share-wave">
@@ -926,14 +926,13 @@
                 hideContainer.classList.add('hide');
                 onstickychange.classList.remove('f-just-between');
                 onstickychange.classList.add('f-just-center');
-                sunsocialshares.classList.add('w-100', 'bg-White', 'pad--10');
-                sunsocialshares.style.transition = 'all 0.3s ease-in-out';
+                sunsocialshares.classList.add('social-shares-gradient');
 
             } else {
                 hideContainer.classList.remove('hide');
                 onstickychange.classList.add('f-just-between');
                 onstickychange.classList.remove('f-just-center');
-                sunsocialshares.classList.remove('w-100', 'bg-White', 'pad--10');
+                sunsocialshares.classList.remove('social-shares-gradient');
             }
         });
 

@@ -115,14 +115,36 @@ article {
             max-width: 10rem;
         }
     }
+
     @include laptop {
         & {
             max-width: 5rem;
         }
     }
+
     @include tablet {
         & {
             max-width: 10rem;
+        }
+    }
+}
+
+.social-shares-gradient {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to bottom, #fff 70%, #ffffff00);
+    transition: all 0.3s ease-in-out;
+}
+
+.sun-social-shares {
+    @include mobile-s {
+
+        & {
+            gap: 0.2rem !important;
+        }
+
+        .share-wave i {
+            font-size: 0.7rem;
         }
     }
 }
