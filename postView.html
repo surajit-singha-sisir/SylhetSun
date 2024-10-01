@@ -293,7 +293,8 @@
                             </span>
                         </div>
                         <!-- SOCIAL SHARE -->
-                        <div class="f f-wrap gap-05 f-just-center f-align-items-center sun-social-shares" id="sun-social-shares">
+                        <div class="f f-wrap gap-05 f-just-center f-align-items-center sun-social-shares"
+                            id="sun-social-shares">
 
                             <span class="relative t-0 cur-pointer" onclick="shareLink(this)">
                                 <span class="share-wave">
@@ -341,7 +342,7 @@
                     </hgroup>
 
                     <!-- THUMBNAIL -->
-                    <div class="relative w-80 m-auto f f-col pad-b--10">
+                    <div class="relative w-100 m-auto f f-col pad-b--10">
                         <img class="img-w-res"
                             src="https://images.prothomalo.com/prothomalo-bangla%2F2024-09-24%2Fk8k3442a%2Fhostages.jpg"
                             alt="">
@@ -919,7 +920,7 @@
         const onstickychange = document.getElementById('onstickychange');
         const sunsocialshares = document.getElementById('sun-social-shares');
 
-        window.addEventListener('scroll', function () {
+        function operation() {
             const currentHeight = window.pageYOffset;
 
             if (currentHeight > 500) {
@@ -934,7 +935,17 @@
                 onstickychange.classList.remove('f-just-center');
                 sunsocialshares.classList.remove('social-shares-gradient');
             }
-        });
+        }
+
+        function handleSize() {
+            const width = window.innerWidth;
+            if (width < 768) {
+                window.addEventListener('touchmove', operation);
+            } else {
+                window.addEventListener('scroll', operation);
+            }
+        }
+        handleSize();
 
 
 
