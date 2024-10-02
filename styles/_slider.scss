@@ -64,6 +64,12 @@
             grid-template-columns: 1fr 1fr !important;
         }
     }
+
+    @include tablet {
+        & {
+            grid-template-columns: 1fr !important;
+        }
+    }
 }
 
 .sun-footer-border {
@@ -125,4 +131,14 @@
             font-size: 1.1rem;
         }
     }
+}
+
+.g-res-3-col-container {
+    @include tablet {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.g-row-gap-15 {
+    row-gap: 1.5rem;
 }
