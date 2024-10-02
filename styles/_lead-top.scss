@@ -80,8 +80,8 @@
 .sun-quote-chirkut {
     border-radius: 50%;
     overflow: hidden;
-    max-height: auto;
     width: 10rem;
+    height: min-content;
     aspect-ratio: 1;
     border: 1px solid var(--sub-div-color);
 
@@ -95,6 +95,7 @@
 
 .sun-top-article {
     align-items: center;
+
     .sun-top-article-img {
         flex: 1;
         min-width: 10rem;
