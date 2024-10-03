@@ -1139,4 +1139,194 @@ article {
   }
 }
 
+.sun-cat-tags {
+  position: relative;
+  border-bottom: 1px solid var(--dark-color);
+  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.sun-cat-tags h1 {
+  font-size: 2rem;
+}
+.sun-cat-tags ul {
+  position: relative;
+}
+.sun-cat-tags ul li {
+  position: relative;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--dark-color);
+  transition: all 0.3s ease-in-out;
+}
+.sun-cat-tags ul li a {
+  color: var(--text-color);
+}
+.sun-cat-tags ul li:hover {
+  border: 1px solid var(--span-color);
+  transition: all 0.3s ease-in-out;
+}
+.sun-cat-tags ul li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--div-color);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.sun-cat-tags ul li:hover::before {
+  background-color: var(--span-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.sun-cat-article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.sun-cat-article:hover h2 {
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+
+.sun-cat-articles {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 0.8rem;
+}
+.sun-cat-articles a:nth-child(1) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+.sun-cat-articles a:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.sun-cat-articles a:nth-child(3) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.sun-cat-articles a:nth-child(n+4) {
+  grid-column: span 1;
+}
+.sun-cat-articles a:nth-child(n+4) h3 {
+  font-size: 1.1rem;
+}
+.sun-cat-articles a:hover h3 {
+  text-decoration: underline;
+  color: var(--Red);
+}
+@media only screen and (max-width: 1024px) {
+  .sun-cat-articles a:nth-child(1) {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+  .sun-cat-articles a:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .sun-cat-articles a:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .sun-cat-articles a:nth-child(n+4) {
+    grid-column: span 1;
+  }
+  .sun-cat-articles a:nth-child(n+4) h3 {
+    font-size: 1.1rem;
+  }
+  .sun-cat-articles a:nth-child(n+4) h3 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sun-cat-articles {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--dark-color);
+  }
+  .sun-cat-articles a:nth-child(n+1) {
+    grid-column: 1/-1;
+  }
+  .sun-cat-articles a:nth-child(n+1) h3 {
+    font-size: 1.2rem !important;
+  }
+}
+
+.sun-cat-sub-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sunGetMoreData {
+  position: relative;
+  width: 100%;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sunGetMoreData li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--dark-color);
+}
+.sunGetMoreData li .cat-left-border {
+  position: relative;
+  display: block;
+  width: 0.3rem;
+  height: 3rem;
+  background-color: var(--span-color);
+}
+.sunGetMoreData li:hover h3 {
+  color: var(--Red);
+  text-decoration: underline;
+}
+.sunGetMoreData li:hover .cat-left-border {
+  background-color: var(--cat-color);
+}
+.sunGetMoreData li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.sunGetMoreData button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  font-family: "SolaimanLipi", sans-serif;
+  padding: 0.5rem 1rem;
+  background-color: var(--div-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.sunGetMoreData button img {
+  height: 1rem;
+  width: auto;
+}
+.sunGetMoreData button:hover {
+  background-color: var(--span-color);
+  transition: background-color 0.3s ease-in-out;
+}
+
 /*# sourceMappingURL=style.css.map */

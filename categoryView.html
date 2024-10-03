@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylhet Sun Index</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.0.01/mastors.css">
+    <script src="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.0.01/mastors.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/solaimanlipi" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body class="scroll-bar-sun">
+
+    <header class="z-6 relative topBar relative bg-Div w-100 h--40">
+        <div class="pad-lr--10 res-container w-i h-i flex f-just-between f-align-items-center m-auto">
+            <!-- LOGO -->
+            <a href="#" class="f f-align-items-center h-i pad-tb--08">
+                <img class="img-h-res" src="resources/sylhetsunlogo.png" alt="Sylhet Sun Logo">
+            </a>
+            <!-- SOCIAL ICONS -->
+            <div class="social-shares">
+                <ul class="li-none f gap-10">
+                    <li><a href="#"><img src="resources/icons/facebook.svg" alt="Facebook" title="Facebook"></a></li>
+                    <li><a href="#"><img src="resources/icons/whatsapp.svg" alt="WhatsApp" title="WhatsApp"></a></li>
+                    <li><a href="#"><img src="resources/icons/instagram.svg" alt="Instagram" title="Instagram"></a></li>
+                    <li><a href="#"><img src="resources/icons/x.svg" alt="Twitter-X" title="Twitter-X"></a></li>
+                    <li><a href="#"><img src="resources/icons/youtube.svg" alt="Youtube" title="Youtube"></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="b-bottom">
+    </header>
+
+
+    <!-- SHORT NEWS -->
+    <header class="z-6 relative res-container top-shorts f gap--10 pad-tb--20 w-100 h-auto m-auto">
+
+        <a href="#" class="top-short-story f gap--10 f-just-center">
+            <span class="top-shorts-img">
+                <img class="obj-fit-h" src="https://dummyimage.com/400x300" alt="">
+            </span>
+            <div class="f gap--10">
+                <span>
+                    <h3 class="pad-l--05 text-dotted-3">মারতে মারতে পথচারীদের সেলফি তুলে যেতে বলেছিলেন যুবকেরা</h3>
+                </span>
+            </div>
+        </a>
+
+        <a href="#" class="top-short-story f gap--10 f-just-center">
+            <span class="top-shorts-img">
+                <img class="obj-fit-h" src="https://dummyimage.com/400x300" alt="">
+            </span>
+            <div class="f gap--10">
+                <span>
+                    <h3 class="pad-l--05 text-dotted-3">মারতে মারতে পথচারীদের সেলফি তুলে যেতে বলেছিলেন যুবকেরা</h3>
+                </span>
+            </div>
+        </a>
+
+
+        <a href="#" class="top-short-story f gap--10 f-just-center">
+            <span class="top-shorts-img">
+                <img class="obj-fit-h" src="https://dummyimage.com/400x300" alt="">
+            </span>
+            <div class="f gap--10">
+                <span>
+                    <h3 class="pad-l--05 text-dotted-3">মারতে মারতে পথচারীদের সেলফি তুলে যেতে বলেছিলেন যুবকেরা</h3>
+                </span>
+            </div>
+        </a>
+
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="nav-bar z-5 sticky-top bg-cat w-100">
+        <div class="relative z-i res-container bg-cat m-auto f f-just-between f-align-items-center">
+            <section>
+                <a class="h--15 w-auto" href="#">
+                    <img class="h-i w-i" src="resources/icons/home.svg" alt="">
+                </a>
+            </section>
+
+            <section>
+                <ul class="sun-navigation f gap--10 f-wrap f-just-center f-align-items-center text--15">
+                    <li>
+                        <a href="#" class="anchor-White">প্রচ্ছদ</a>
+                    </li>
+                    <li class="nav-toggle-bar relative f gap--05 f-align-items-center" onclick="navToggle(event)">
+                        <a href="#" class="anchor-White">সিলেট</a> <img class="img-rotate-45 cur-pointer"
+                            src="resources/icons/chevron-down.svg" alt="">
+
+                        <ul class="absolute bg-cat pad--10 pos-t-center f f-col gap--10">
+                            <li><a href="#" class="anchor-White">সিলেট</a></li>
+                            <li><a href="#" class="anchor-White">সুনামগঞ্জ</a></li>
+                            <li><a href="#" class="anchor-White">হবিগঞ্জ</a></li>
+                            <li><a href="#" class="anchor-White">মৌলভীবাজার</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="anchor-White">জাতীয়</a>
+                    </li>
+                    <li>
+                        <a href="#" class="anchor-White">রাজনীতি</a>
+                    </li>
+                    <li class="nav-toggle-bar relative f gap--05 f-align-items-center" onclick="navToggle(event)">
+                        <a href="#" class="anchor-White">সিলেট</a> <img class="img-rotate-45 cur-pointer"
+                            src="resources/icons/chevron-down.svg" alt="">
+                        <ul class="absolute bg-cat pad--10 pos-t-center f f-col gap--10">
+                            <li><a href="#" class="anchor-White">সিলেট</a></li>
+                            <li><a href="#" class="anchor-White">সুনামগঞ্জ</a></li>
+                            <li><a href="#" class="anchor-White">হবিগঞ্জ</a></li>
+                            <li><a href="#" class="anchor-White">মৌলভীবাজার</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="anchor-White">খেলাধুলা</a>
+                    </li>
+                    <li>
+                        <a href="#" class="anchor-White">বিনোদন</a>
+                    </li>
+                    <li>
+                        <a href="#" class="anchor-White">মুক্তিযুদ্ধ</a>
+                    </li>
+                    <li>
+                        <a href="#" class="anchor-White">তথ্য ও প্রযুক্তি</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="hamburger cur-pointer" onclick="hamburgerToggle()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </section>
+        </div>
+        <!-- RESPOSIVE -->
+        <span class="relative z-4 f f-col w-100 pad--05 hamb-shows hide">
+            <hr class="bg-Border">
+
+            <section class="hamb-container scroll-bar-sun res-container m-auto pad-t--10">
+                <ul class="f gap--10 text--15 f-col">
+                    <li>
+                        <a href="#">ফোন টেলিফোন</a>
+                    </li>
+                    <li>
+                        <a href="#">ইমেইল</a>
+                    </li>
+                    <li>
+                        <a href="#">ক্যাটেগনারিজমেন্ট</a>
+                    </li>
+                    <li>
+                        <a href="#">জাতীয় প্রযুক্তি</a>
+                        <ul class="ham-sub-cat f f-col f-wrap text--13 text-darker">
+                            <li>
+                                <a class="f gap--05 f-align-items-center" href="#">
+                                    <img src="resources/icons/chevron-double.svg" alt="">
+                                    <p>আপামর</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="f gap--05 f-align-items-center" href="#">
+                                    <img src="resources/icons/chevron-double.svg" alt="">
+                                    <p>আপামর</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="f gap--05 f-align-items-center" href="#">
+                                    <img src="resources/icons/chevron-double.svg" alt="">
+                                    <p>আপামর</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">জাতীয় সিলেট</a>
+                    </li>
+                    <li>
+                        <a href="#">নিবন্ধন</a>
+                    </li>
+                    <li>
+                        <a href="#">আবেদন</a>
+                    </li>
+                    <li>
+                        <a href="#">রাজনীতি</a>
+                    </li>
+                    <li>
+                        <a href="#">আন্তর্জাতিক</a>
+                    </li>
+                    <li>
+                        <a href="#">অর্থনীতি</a>
+                    </li>
+                    <li>
+                        <a href="#">শিক্ষা</a>
+                    </li>
+                    <li>
+                        <a href="#">বিজ্ঞান ও প্রযুক্তি</a>
+                    </li>
+                    <li>
+                        <a href="#">স্বাস্থ্য</a>
+                    </li>
+                    <li>
+                        <a href="#">জীবনযাপন</a>
+                    </li>
+                    <li>
+                        <a href="#">ভ্রমণ</a>
+                    </li>
+                    <li>
+                        <a href="#">খেলাধুলা</a>
+                    </li>
+                    <li>
+                        <a href="#">বিনোদন</a>
+                    </li>
+                    <li>
+                        <a href="#">সাহিত্য</a>
+                    </li>
+                </ul>
+            </section>
+        </span>
+    </nav>
+
+
+    <!-- MAIN SECTION -->
+    <main class="z-1 relative w-100 h-auto">
+
+        <!-- CATEGORY NAME -->
+        <div class="sun-cat-tags res-container m-auto">
+            <h1 class="pad-b--10">বাংলাদেশ</h1>
+            <ul class="f f-just-center gap-05 f-wrap">
+                <li><a href="#">হত্যাকাণ্ড</a></li>
+                <li><a href="#">আইআরজিসি</a></li>
+                <li><a href="#">যুবরাজ সালমান</a></li>
+                <li><a href="#">ভিশন-২০৩০</a></li>
+                <li><a href="#">শ্রম অভিবাসন</a></li>
+                <li><a href="#">ইসা ইউসুফ</a></li>
+                <li><a href="#">আসিফ মাহমুদ</a></li>
+                <li><a href="#">ফ্যাসিস্ট সরকার</a></li>
+            </ul>
+        </div>
+        <section class="g-res-3-col-container gap-10 res-container m-auto pad-t--10">
+
+            <!-- LEFT COLUMN -->
+            <aside class="span-2">
+
+                <section>
+                    <div class="">
+                        <div class="span-2 sun-cat-articles">
+
+                            <!-- MAIN -->
+                            <a href="#" class="sun-cat-article">
+                                <!-- TIMER -->
+                                <div
+                                    class="f gap--05 f-just-start f-align-items-center absolute z-2 t-0 pad--03 bg-cat">
+                                    <span class="w--08 f f-align-items-center">
+                                        <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                    </span>
+                                    <p class="text--08 text-White text-hov-Red">১ ঘন্টা আগে</p>
+                                </div>
+                                <!-- THUMB -->
+                                <span class="relative asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res img-hover-scale"
+                                        src="https://images.prothomalo.com/prothomalo-bangla%2F2024-10-03%2Fg52qis72%2FBiden-opposes.webp"
+                                        alt="">
+
+                                </span>
+
+                                <!-- HEADLINE -->
+                                <div class="pad--05 bg-cat">
+                                    <h3 class="text-center text-White">ইরানের পারমাণবিক স্থাপনায় ইসরায়েলি হামলায় সায় নেই
+                                        বাইডেনের
+                                    </h3>
+                                </div>
+                            </a>
+
+                            <!-- LEGENDS -->
+                            <a href="#" class="sun-cat-sub-articles">
+                                <!-- THUMB -->
+                                <span class="asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res" src="https://dummyimage.com/400x300" alt="">
+                                </span>
+
+                                <div class="f-flex-1 f f-col gap-05">
+                                    <!-- HEADLINE -->
+                                    <div class="">
+                                        <h3 class="pad-l--01 text-color text-dotted-4 m-t---02">COL-2 ইরানের পারমাণবিক
+                                            স্থাপনায়
+                                            ইসরায়েলি
+                                            হামলায় সায় নেই বাইডেনের
+                                        </h3>
+                                    </div>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="sun-cat-sub-articles">
+                                <!-- THUMB -->
+                                <span class="asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res" src="https://dummyimage.com/400x300" alt="">
+                                </span>
+
+                                <div class="f-flex-1 f f-col gap-05">
+                                    <!-- HEADLINE -->
+                                    <div class="">
+                                        <h3 class="pad-l--01 text-color text-dotted-4 m-t---02">COL-2-2 ইরানের পারমাণবিক
+                                            স্থাপনায়
+                                            ইসরায়েলি
+                                            হামলায় সায় নেই বাইডেনের
+                                        </h3>
+                                    </div>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- TOP NEWS -->
+                            <a href="#" class="sun-cat-sub-articles">
+                                <!-- THUMB -->
+                                <span class="asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res" src="https://dummyimage.com/400x300" alt="">
+                                </span>
+
+                                <div class="f-flex-1">
+                                    <!-- HEADLINE -->
+                                    <div class="">
+                                        <h3 class="pad-l--01 text-color text-dotted-3 m-t---02">ইরানের পারমাণবিক
+                                            স্থাপনায়
+                                            ইসরায়েলি
+                                            হামলায় সায় নেই বাইডেনের
+                                        </h3>
+                                    </div>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="sun-cat-sub-articles">
+                                <!-- THUMB -->
+                                <span class="asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res" src="https://dummyimage.com/400x300" alt="">
+                                </span>
+
+                                <div class="f-flex-1">
+                                    <!-- HEADLINE -->
+                                    <div class="">
+                                        <h3 class="pad-l--01 text-color text-dotted-3 m-t---02">ইরানের পারমাণবিক
+                                            স্থাপনায়
+                                            ইসরায়েলি
+                                            হামলায় সায় নেই বাইডেনের
+                                        </h3>
+                                    </div>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="sun-cat-sub-articles">
+                                <!-- THUMB -->
+                                <span class="asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res" src="https://dummyimage.com/400x300" alt="">
+                                </span>
+
+                                <div class="f-flex-1">
+                                    <!-- HEADLINE -->
+                                    <div class="">
+                                        <h3 class="pad-l--01 text-color text-dotted-3 m-t---02">ইরানের পারমাণবিক
+                                            স্থাপনায়
+                                            ইসরায়েলি
+                                            হামলায় সায় নেই বাইডেনের
+                                        </h3>
+                                    </div>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <!-- OTHER NEWS -->
+                            <a href="#" class="sun-cat-sub-articles">
+                                <!-- THUMB -->
+                                <span class="asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res" src="https://dummyimage.com/400x300" alt="">
+                                </span>
+
+                                <div class="f-flex-1">
+                                    <!-- HEADLINE -->
+                                    <div class="">
+                                        <h3 class="pad-l--01 text-color text-dotted-3 m-t---02">ইরানের পারমাণবিক
+                                            স্থাপনায়
+                                            ইসরায়েলি
+                                            হামলায় সায় নেই বাইডেনের
+                                        </h3>
+                                    </div>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="sun-cat-sub-articles">
+                                <!-- THUMB -->
+                                <span class="asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res" src="https://dummyimage.com/400x300" alt="">
+                                </span>
+
+                                <div class="f-flex-1">
+                                    <!-- HEADLINE -->
+                                    <div class="">
+                                        <h3 class="pad-l--01 text-color text-dotted-3 m-t---02">ইরানের পারমাণবিক
+                                            স্থাপনায়
+                                            ইসরায়েলি
+                                            হামলায় সায় নেই বাইডেনের
+                                        </h3>
+                                    </div>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="sun-cat-sub-articles">
+                                <!-- THUMB -->
+                                <span class="asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res" src="https://dummyimage.com/400x300" alt="">
+                                </span>
+
+                                <div class="f-flex-1">
+                                    <!-- HEADLINE -->
+                                    <div class="">
+                                        <h3 class="pad-l--01 text-color text-dotted-3 m-t---02">ইরানের পারমাণবিক
+                                            স্থাপনায়
+                                            ইসরায়েলি
+                                            হামলায় সায় নেই বাইডেনের
+                                        </h3>
+                                    </div>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="sun-cat-sub-articles">
+                                <!-- THUMB -->
+                                <span class="asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res" src="https://dummyimage.com/400x300" alt="">
+                                </span>
+
+                                <div class="f-flex-1">
+                                    <!-- HEADLINE -->
+                                    <div class="">
+                                        <h3 class="pad-l--01 text-color text-dotted-3 m-t---02">ইরানের পারমাণবিক
+                                            স্থাপনায়
+                                            ইসরায়েলি
+                                            হামলায় সায় নেই বাইডেনের
+                                        </h3>
+                                    </div>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="sun-cat-sub-articles">
+                                <!-- THUMB -->
+                                <span class="asp-r-4-3 overflow-hidden">
+                                    <img class="img-w-res obj-fit-w-res" src="https://dummyimage.com/400x300" alt="">
+                                </span>
+
+                                <div class="f-flex-1">
+                                    <!-- HEADLINE -->
+                                    <div class="">
+                                        <h3 class="pad-l--01 text-color text-dotted-3 m-t---02">ইরানের পারমাণবিক
+                                            স্থাপনায়
+                                            ইসরায়েলি
+                                            হামলায় সায় নেই বাইডেনের
+                                        </h3>
+                                    </div>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">১ ঘন্টা আগে</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="sunGetMoreData">
+
+                        <ul class="cat-xhr-news">
+                            <li>
+                                <span class="cat-left-border"></span>
+                                <a href="#">
+                                    <!-- HEADLINE -->
+                                    <h3>
+                                        ইসরায়েলে শতাধিক রকেট ছুড়ল হিজবুল্লাহ
+                                    </h3>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">২দিন আগে</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <span class="cat-left-border"></span>
+                                <a href="#">
+                                    <!-- HEADLINE -->
+                                    <h3>
+                                        ইরান কী ক্ষেপণাস্ত্র ছুড়েছে, ইসরায়েল সেগুলো মোকাবিলা করল কীভাবে
+                                    </h3>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">২দিন আগে</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <span class="cat-left-border"></span>
+                                <a href="#">
+                                    <!-- HEADLINE -->
+                                    <h3>
+                                        ইসরায়েলের পাশে যুক্তরাষ্ট্র, সংযত হওয়ার আহ্বান অন্যদের
+                                    </h3>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">২দিন আগে</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <span class="cat-left-border"></span>
+                                <a href="#">
+                                    <!-- HEADLINE -->
+                                    <h3>
+                                        মধ্যপ্রাচ্যে পাল্টাপাল্টি হামলার জেরে বিশ্ববাজারে তেলের দাম বেড়েছে
+                                    </h3>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">২দিন আগে</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <span class="cat-left-border"></span>
+                                <a href="#">
+                                    <!-- HEADLINE -->
+                                    <h3>
+                                        স্যাটেলাইট ছবিতে ইসরায়েলের বিমানঘাঁটির ক্ষয়ক্ষতির চিহ্ন
+                                    </h3>
+                                    <!-- TIMER -->
+                                    <div class="f gap--05 f-just-start f-align-items-center">
+                                        <span class="w--08 f f-align-items-center">
+                                            <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                        </span>
+                                        <p class="text--08 text-color">২দিন আগে</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <button>
+                            <img class="sun-loading" src="resources/icons/loading.svg" alt="">
+                            <p>আরও পড়ুন</p>
+                        </button>
+                    </div>
+                </section>
+
+
+
+            </aside>
+
+            <aside class="span-1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto vel, tenetur ad facilis debitis
+                recusandae eos voluptate blanditiis assumenda, voluptatem laudantium quis ipsum vero. Numquam
+                similique
+                aspernatur eos repellendus vitae.
+            </aside>
+        </section>
+
+
+
+        <div class="local-padding"></div>
+    </main>
+
+    <footer>
+        <!-- LOGO -->
+        <section class="res-container m-auto w-100 f f-just-between f-align-items-center pad-b--10">
+            <!-- IMG -->
+            <span class="logo-footer relative h--30">
+                <img class="relative w-auto h-i" src="resources/sylhetsunlogo.png" alt="">
+            </span>
+            <!-- SOCIAL ICONS -->
+            <div class="social-shares">
+                <ul class="f gap-10">
+                    <li><a href="#"><img src="resources/icons/facebook.svg" alt="Facebook" title="Facebook"></a></li>
+                    <li><a href="#"><img src="resources/icons/whatsapp.svg" alt="WhatsApp" title="WhatsApp"></a></li>
+                    <li><a href="#"><img src="resources/icons/instagram.svg" alt="Instagram" title="Instagram"></a></li>
+                    <li><a href="#"><img src="resources/icons/x.svg" alt="Twitter-X" title="Twitter-X"></a></li>
+                    <li><a href="#"><img src="resources/icons/youtube.svg" alt="Youtube" title="Youtube"></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-Dark w-100 pad-b--10">
+
+            <section class="sun-footer g-res-3-col-container gap-10 res-container m-auto">
+                <aside class="f gap-05 w-100">
+                    <div class="f f-col gap-05 w-i pad-t--10">
+                        <div class="f gap-10 f-align-items-center">
+                            <span class="w-auto h--12">
+                                <img class="w-auto h-i" src="resources/icons/category.svg" alt="">
+                            </span>
+                            <a href="#" class="text-color">
+                                <h3>আজকের পত্রিকা</h3>
+                            </a>
+                        </div>
+                        <div class="f gap-10 f-align-items-center">
+                            <span class="w-auto h--12">
+                                <img class="w-auto h-i" src="resources/icons/category.svg" alt="">
+                            </span>
+                            <a href="#" class="text-color">
+                                <h3>বঙ্গদর্শন</h3>
+                            </a>
+                        </div>
+                        <div class="f gap-10 f-align-items-center">
+                            <span class="w-auto h--12">
+                                <img class="w-auto h-i" src="resources/icons/category.svg" alt="">
+                            </span>
+                            <a href="#" class="text-color">
+                                <h3>মুক্তমঞ্চ</h3>
+                            </a>
+                        </div>
+                        <div class="f gap-10 f-align-items-center">
+                            <span class="w-auto h--12">
+                                <img class="w-auto h-i" src="resources/icons/category.svg" alt="">
+                            </span>
+                            <a href="#" class="text-color">
+                                <h3>সম্পাদকীয়</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="sun-footer-right-border"></span>
+                </aside>
+
+                <!-- ট্যাগ -->
+                <aside class="sun-footer-des">
+                    <div class="f f-col gap-10">
+                        <h3>জনপ্রিয় ট্যাগস্‌</h3>
+
+                        <ul class="f gap-05 f-wrap">
+                            <li><a href="#">হত্যাকাণ্ড</a></li>
+                            <li><a href="#">আইআরজিসি</a></li>
+                            <li><a href="#">যুবরাজ সালমান</a></li>
+                            <li><a href="#">ভিশন-২০৩০</a></li>
+                            <li><a href="#">শ্রম অভিবাসন</a></li>
+                            <li><a href="#">ইসা ইউসুফ</a></li>
+                            <li><a href="#">আসিফ মাহমুদ</a></li>
+                            <li><a href="#">ফ্যাসিস্ট সরকার</a></li>
+                        </ul>
+                    </div>
+
+                    <span class="sun-footer-right-border"></span>
+                </aside>
+
+                <!-- সম্পাদক মণ্ডলী -->
+                <aside class="sun-footer-des w-100 f f-col gap-10">
+                    <h3>সম্পাদক মণ্ডলী</h3>
+
+                    <ul class="f gap-05 f-wrap">
+                        <table>
+                            <tr>
+                                <td>প্রধান সম্পাদক</td>
+                                <td class="pad-lr--10">:</td>
+                                <td>ফয়সল আহমেদ বাবলু</td>
+                            </tr>
+                            <tr>
+                                <td>সহকারী সম্পাদক</td>
+                                <td class="pad-lr--10">:</td>
+                                <td>আসলাম আহমেদ</td>
+                            </tr>
+                            <tr>
+                                <td>বার্তা সম্পাদক</td>
+                                <td class="pad-lr--10">:</td>
+                                <td>শফিক মিয়া</td>
+                            </tr>
+                        </table>
+                    </ul>
+                </aside>
+            </section>
+        </section>
+
+        <!-- CREDIT -->
+        <div class="bg-Div w-100 pad--10 text-White f f-just-center">
+            <span class="text-center">&copy; ২০২৪ | সিলেটসান কর্তৃক সর্বসত্ব সংরক্ষিত | পোর্টাল উন্নয়নে
+                <a href="https://kehem.com/" class="text-White link-u">কেহেম আইটি</a></span>
+        </div>
+    </footer>
+
+
+
+</body>
+
+
+<script>
+
+    function navToggle(event) {
+        const navToggleBar = event.currentTarget;
+        const ul = navToggleBar.querySelector('ul');
+        const img = navToggleBar.querySelector('img');
+
+        if (ul.classList.contains('show')) {
+
+            img.classList.add('img-rotate-15');
+            ul.classList.remove('show');
+        } else {
+            img.classList.remove('img-rotate-45');
+            ul.classList.add('show');
+        }
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.nav-toggle-bar')) {
+                ul.classList.remove('show');
+                img.classList.add('img-rotate-45');
+            }
+        });
+    }
+
+
+    function hamburgerToggle() {
+        const hambData = document.querySelector('.hamb-shows');
+        const isHidden = hambData.classList.contains('hide');
+        const body = document.querySelector('body');
+        body.classList.toggle('overflow-hidden');
+
+        const addOverflow = document.querySelector('nav.nav-bar');
+
+        addOverflow.classList.toggle('nav-overflow');
+
+        // HAMBURGER ICON CHANGE
+        const spans = document.querySelectorAll('.hamburger span');
+        spans[0].classList.toggle('hamb-rotate-1');
+        spans[1].classList.toggle('hamb-rotate-2');
+        spans[2].classList.toggle('hamb-rotate-3');
+
+
+
+        if (isHidden) {
+            hambData.style.transition = 'transform 0.3s ease-in-out';
+            hambData.style.transform = 'translateY(-100%)';
+
+            setTimeout(() => {
+                hambData.style.transform = 'translateY(0)';
+            }, 10);
+
+            hambData.classList.remove('hide');
+
+        } else {
+            hambData.style.transition = 'transform 0.3s ease-in-out';
+            hambData.style.transform = 'translateY(-100%)';
+
+            setTimeout(() => {
+                hambData.classList.add('hide');
+            }, 300);
+        }
+
+        document.addEventListener('click', function (event) {
+            const hambData = document.querySelector('.hamb-shows');
+            const hamburger = document.querySelector('.hamburger');
+
+            if (!hamburger.contains(event.target) && !hambData.contains(event.target)) {
+                hambData.style.transition = 'transform 0.3s ease-in-out';
+                hambData.style.transform = 'translateY(-100%)';
+
+
+                spans[0].classList.remove('hamb-rotate-1');
+                spans[1].classList.remove('hamb-rotate-2');
+                spans[2].classList.remove('hamb-rotate-3');
+                body.classList.remove('overflow-hidden');
+
+                setTimeout(() => {
+                    addOverflow.classList.remove('nav-overflow');
+                    hambData.classList.add('hide');
+                }, 300);
+            }
+        });
+
+    }
+
+    // print = console.log;
+
+
+
+    // SHARE SOCIAL
+    function shareLink(event) {
+        const a = event.querySelector('i');
+        const href = a.getAttribute('href');
+        const url = window.location.href;
+        const windowFeatures = 'width=600, height=400, scrollbars=no, resizable=no';
+
+        // FACEBOOK SHARE
+        if (a.classList.contains('fa-facebook-f')) {
+            const shareUrl = 'https://www.facebook.com/sharer.php?u=' + encodeURIComponent(url);
+            window.open(shareUrl, '_blank', windowFeatures);
+        }
+
+        // MESSENGER SHARE
+        if (a.classList.contains('fa-facebook-messenger')) {
+            const shareUrl = 'https://m.me/?link=' + encodeURIComponent(url);
+            window.open(shareUrl, '_blank', windowFeatures);
+        }
+
+
+
+        // TWITTER-X SHARE
+        if (a.classList.contains('fa-x-twitter')) {
+            const shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent('Check this out!');
+            window.open(shareUrl, '_blank', windowFeatures);
+        }
+
+
+        // WHATSAPP SHARE
+        if (a.classList.contains('fa-whatsapp')) {
+            const shareUrl = 'https://wa.me/' + href + '?text=' + encodeURIComponent(url);
+            window.open(shareUrl, '_blank', windowFeatures);
+        }
+
+        // LINKEDIN SHARE
+        if (a.classList.contains('fa-linkedin')) {
+            const shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
+            window.open(shareUrl, '_blank', windowFeatures);
+        }
+
+    }
+
+    // INCREASE FONT SIZE
+    function plusButton() {
+        const article = document.getElementById('article');
+        const fontSize = parseFloat(window.getComputedStyle(article).getPropertyValue('font-size'));
+
+        if (fontSize >= 32) {
+            alert("Maximum font size reached.");
+        } else {
+            article.style.fontSize = (fontSize + 1) + 'px';
+        }
+    }
+
+    // DECREASE FONT SIZE
+    function minusButton() {
+        const article = document.getElementById('article');
+        const fontSize = parseFloat(window.getComputedStyle(article).getPropertyValue('font-size'));
+
+        if (fontSize <= 14) {
+            alert("Minimum font size reached.");
+        } else {
+            article.style.fontSize = (fontSize - 1) + 'px';
+        }
+    }
+
+    function onstickyhide() {
+        const hideContainer = document.getElementById('onstickyhide');
+        const onstickychange = document.getElementById('onstickychange');
+        const sunsocialshares = document.getElementById('sun-social-shares');
+
+        function operation() {
+            const currentHeight = window.pageYOffset;
+
+            if (currentHeight > 500) {
+                hideContainer.classList.add('hide');
+                onstickychange.classList.remove('f-just-between');
+                onstickychange.classList.add('f-just-center');
+                sunsocialshares.classList.add('social-shares-gradient');
+
+            } else {
+                hideContainer.classList.remove('hide');
+                onstickychange.classList.add('f-just-between');
+                onstickychange.classList.remove('f-just-center');
+                sunsocialshares.classList.remove('social-shares-gradient');
+            }
+        }
+
+        function handleSize() {
+            const width = window.innerWidth;
+            if (width < 768) {
+                window.addEventListener('touchmove', operation);
+            } else {
+                window.addEventListener('scroll', operation);
+            }
+        }
+        handleSize();
+
+
+
+    }
+    onstickyhide();
+</script>
+
+</html>
