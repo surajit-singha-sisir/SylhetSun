@@ -330,17 +330,17 @@ li {
 }
 
 .overflow-none {
-  position: relative;
+  overflow: auto;
 }
 .overflow-none::-webkit-scrollbar {
-  display: none;
   width: 0.3rem;
 }
 .overflow-none::-webkit-scrollbar-track {
+  visibility: hidden;
   background: transparent;
 }
 .overflow-none::-webkit-scrollbar-thumb {
-  opacity: 0;
+  visibility: hidden;
   border-radius: 1rem;
   background: var(--dark-color);
   transition: all 0.3s ease-in-out;
@@ -349,15 +349,22 @@ li {
   overflow: scroll;
 }
 .overflow-none:hover::-webkit-scrollbar {
-  display: block;
+  visibility: visible;
 }
 .overflow-none:hover::-webkit-scrollbar-thumb {
-  opacity: 1;
+  visibility: visible;
   transition: all 0.3s ease-in-out;
 }
 @media only screen and (max-width: 768px) {
+  .overflow-none {
+    scrollbar-width: none;
+  }
+  .overflow-none::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
   .overflow-none::-webkit-scrollbar-thumb {
-    display: none;
+    background-color: transparent;
   }
 }
 

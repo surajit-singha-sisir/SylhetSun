@@ -197,19 +197,19 @@ li {
 }
 
 .overflow-none {
-    position: relative;
+    overflow: auto;
 
     &::-webkit-scrollbar {
-        display: none;
         width: 0.3rem;
     }
 
     &::-webkit-scrollbar-track {
+        visibility: hidden;
         background: transparent;
     }
 
     &::-webkit-scrollbar-thumb {
-        opacity: 0;
+        visibility: hidden;
         border-radius: 1rem;
         background: var(--dark-color);
         transition: all 0.3s ease-in-out;
@@ -219,18 +219,26 @@ li {
         overflow: scroll;
 
         &::-webkit-scrollbar {
-            display: block;
+            visibility: visible;
         }
 
         &::-webkit-scrollbar-thumb {
-            opacity: 1;
+            visibility: visible;
             transition: all 0.3s ease-in-out;
         }
     }
 
     @include tablet {
-        &::-webkit-scrollbar-thumb {
-            display: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
         }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+
+        scrollbar-width: none;
     }
+
 }
