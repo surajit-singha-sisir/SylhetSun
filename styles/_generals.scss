@@ -64,7 +64,7 @@ li {
         text-decoration: none;
     }
 
-    @include mobile-s {
+    @include mobile-m {
         & {
             display: none;
         }
@@ -167,6 +167,7 @@ li {
         & {
             flex-wrap: wrap;
         }
+
         & a:nth-child(n) {
             width: 100%;
         }
@@ -184,5 +185,52 @@ li {
         position: absolute;
         bottom: 0;
         right: 0;
+    }
+}
+
+.sun-set-on-center {
+    @include mobile-m {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+.overflow-none {
+    position: relative;
+
+    &::-webkit-scrollbar {
+        display: none;
+        width: 0.3rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        opacity: 0;
+        border-radius: 1rem;
+        background: var(--dark-color);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: block;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    @include tablet {
+        &::-webkit-scrollbar-thumb {
+            display: none;
+        }
     }
 }

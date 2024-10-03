@@ -122,10 +122,12 @@
                 transition: color 0.1s ease-in-out;
             }
         }
+
         h3 {
             padding-bottom: 0.5rem;
             border-bottom: 1px solid var(--border)
         }
+
         table {
             font-weight: 600;
             font-size: 1.1rem;
@@ -140,5 +142,23 @@
 }
 
 .g-row-gap-15 {
-    row-gap: 1.5rem;
+    @include desktop {
+        row-gap: 0;
+        column-gap: 1.5rem;
+    }
+
+    @include tablet {
+        row-gap: 1.5rem;
+        column-gap: 0;
+    }
+}
+.b-dark {
+    @include desktop {
+        border: none;
+    }
+
+    @include tablet {
+        padding: 1rem;
+        border: 1px solid var(--border);
+    }
 }

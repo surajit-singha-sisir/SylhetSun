@@ -1,6 +1,8 @@
 @use "root" as *;
 
 .marquee-container {
+    position: relative;
+
     marquee {
         a {
             font-size: var(--medium);
@@ -16,6 +18,16 @@
                 margin-right: 0.5em;
                 border-radius: 50%;
             }
+
+            &:hover {
+                color: var(--Red);
+                text-decoration: underline;
+            }
         }
+
     }
+}
+
+.sun-mark-shadow-btm {
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
 }

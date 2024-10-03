@@ -17,8 +17,8 @@
     <header class="z-6 relative topBar relative bg-Div w-100 h--40">
         <div class="pad-lr--10 res-container w-i h-i flex f-just-between f-align-items-center m-auto">
             <!-- LOGO -->
-            <a href="#" class="f f-align-items-center h-i pad-tb--08">
-                <img class="img-h-res" src="resources/sylhetsunlogo.png" alt="Sylhet Sun Logo">
+            <a href="#" class="f f-align-items-center sun-set-on-center h-i pad-tb--08">
+                <img class="img-h-res" src="resources/sylhetsunwhite.svg" alt="Sylhet Sun Logo">
             </a>
             <!-- SOCIAL ICONS -->
             <div class="social-shares">
@@ -77,43 +77,39 @@
     <!-- NAVIGATION BAR -->
     <nav class="nav-bar z-5 sticky-top bg-cat w-100">
         <div class="relative z-i res-container bg-cat m-auto f f-just-between f-align-items-center">
+            <!-- HOME -->
             <section>
                 <a class="h--15 w-auto" href="#">
                     <img class="h-i w-i" src="resources/icons/home.svg" alt="">
                 </a>
             </section>
-
+            <!-- CATEGORY -->
             <section>
                 <ul class="sun-navigation f gap--10 f-wrap f-just-center f-align-items-center text--15">
                     <li>
-                        <a href="#" class="anchor-White">প্রচ্ছদ</a>
+                        <a href="#" class="anchor-White">জাতীয়</a>
                     </li>
                     <li class="nav-toggle-bar relative f gap--05 f-align-items-center" onclick="navToggle(event)">
-                        <a href="#" class="anchor-White">সিলেট</a> <img class="img-rotate-45 cur-pointer"
-                            src="resources/icons/chevron-down.svg" alt="">
-
-                        <ul class="absolute bg-cat pad--10 pos-t-center f f-col gap--10">
+                        <div class="anchor-White cur-pointer">
+                            সিলেট
+                            <img class="img-rotate-45 cur-pointer" src="resources/icons/chevron-down.svg" alt="">
+                        </div>
+                        <ul class="absolute bg-cat pad--10 pos-t-center z-4 f f-col gap--10">
+                            <li><a href="#" class="anchor-White">মহানগর</a></li>
                             <li><a href="#" class="anchor-White">সিলেট</a></li>
                             <li><a href="#" class="anchor-White">সুনামগঞ্জ</a></li>
                             <li><a href="#" class="anchor-White">হবিগঞ্জ</a></li>
                             <li><a href="#" class="anchor-White">মৌলভীবাজার</a></li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="anchor-White">জাতীয়</a>
                     </li>
                     <li>
                         <a href="#" class="anchor-White">রাজনীতি</a>
                     </li>
-                    <li class="nav-toggle-bar relative f gap--05 f-align-items-center" onclick="navToggle(event)">
-                        <a href="#" class="anchor-White">সিলেট</a> <img class="img-rotate-45 cur-pointer"
-                            src="resources/icons/chevron-down.svg" alt="">
-                        <ul class="absolute bg-cat pad--10 pos-t-center f f-col gap--10">
-                            <li><a href="#" class="anchor-White">সিলেট</a></li>
-                            <li><a href="#" class="anchor-White">সুনামগঞ্জ</a></li>
-                            <li><a href="#" class="anchor-White">হবিগঞ্জ</a></li>
-                            <li><a href="#" class="anchor-White">মৌলভীবাজার</a></li>
-                        </ul>
+                    <li>
+                        <a href="#" class="anchor-White">অর্থনীতি</a>
+                    </li>
+                    <li>
+                        <a href="#" class="anchor-White">আন্তর্জাতিক</a>
                     </li>
                     <li>
                         <a href="#" class="anchor-White">খেলাধুলা</a>
@@ -122,99 +118,153 @@
                         <a href="#" class="anchor-White">বিনোদন</a>
                     </li>
                     <li>
-                        <a href="#" class="anchor-White">মুক্তিযুদ্ধ</a>
-                    </li>
-                    <li>
-                        <a href="#" class="anchor-White">তথ্য ও প্রযুক্তি</a>
+                        <a href="#" class="anchor-White">আইন-আদালত</a>
                     </li>
                 </ul>
             </section>
-
+            <!-- HAMBURGER -->
             <section class="hamburger cur-pointer" onclick="hamburgerToggle()">
                 <span></span>
                 <span></span>
                 <span></span>
             </section>
         </div>
+        <!-- MARQUEE -->
+        <section class="relative z-0 w-i bg-Dark sun-mark-shadow-btm">
+            <div class="marquee-container pad--10 relative f f-just-between res-container m-auto">
+                <marquee onmouseover="this.stop()" onmouseleave="this.start()">
+                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
+                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
+                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
+                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
+                </marquee>
+                <span class="text--13 bg-Sub-div h-100 pad--05 absolute pos-left-center">
+                    সর্বশেষ
+                </span>
+            </div>
+
+        </section>
+
         <!-- RESPOSIVE -->
         <span class="relative z-4 f f-col w-100 pad--05 hamb-shows hide">
             <hr class="bg-Border">
 
             <section class="hamb-container scroll-bar-sun res-container m-auto pad-t--10">
-                <ul class="f gap--10 text--15 f-col">
+                <ul class="f gap--10 text--15 pad-t--10 pad-b--30 f-col">
+
                     <li>
-                        <a href="#">ফোন টেলিফোন</a>
+                        <a href="#" class="anchor-White">জাতীয়</a>
                     </li>
                     <li>
-                        <a href="#">ইমেইল</a>
-                    </li>
-                    <li>
-                        <a href="#">ক্যাটেগনারিজমেন্ট</a>
-                    </li>
-                    <li>
-                        <a href="#">জাতীয় প্রযুক্তি</a>
+                        <a href="#">সিলেট</a>
                         <ul class="ham-sub-cat f f-col f-wrap text--13 text-darker">
                             <li>
                                 <a class="f gap--05 f-align-items-center" href="#">
                                     <img src="resources/icons/chevron-double.svg" alt="">
-                                    <p>আপামর</p>
+                                    <p>মহানগর</p>
                                 </a>
                             </li>
                             <li>
                                 <a class="f gap--05 f-align-items-center" href="#">
                                     <img src="resources/icons/chevron-double.svg" alt="">
-                                    <p>আপামর</p>
+                                    <p>সিলেট</p>
                                 </a>
                             </li>
                             <li>
                                 <a class="f gap--05 f-align-items-center" href="#">
                                     <img src="resources/icons/chevron-double.svg" alt="">
-                                    <p>আপামর</p>
+                                    <p>সুনামগঞ্জ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="f gap--05 f-align-items-center" href="#">
+                                    <img src="resources/icons/chevron-double.svg" alt="">
+                                    <p>হবিগঞ্জ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="f gap--05 f-align-items-center" href="#">
+                                    <img src="resources/icons/chevron-double.svg" alt="">
+                                    <p>মৌলভীবাজার</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">জাতীয় সিলেট</a>
+                        <a href="#" class="anchor-White">রাজনীতি</a>
                     </li>
                     <li>
-                        <a href="#">নিবন্ধন</a>
+                        <a href="#" class="anchor-White">অর্থনীতি</a>
                     </li>
                     <li>
-                        <a href="#">আবেদন</a>
+                        <a href="#" class="anchor-White">আন্তর্জাতিক</a>
                     </li>
                     <li>
-                        <a href="#">রাজনীতি</a>
+                        <a href="#" class="anchor-White">খেলাধুলা</a>
                     </li>
                     <li>
-                        <a href="#">আন্তর্জাতিক</a>
+                        <a href="#" class="anchor-White">বিনোদন</a>
                     </li>
                     <li>
-                        <a href="#">অর্থনীতি</a>
+                        <a href="#" class="anchor-White">আইন-আদালত</a>
+                    </li>
+
+                    <li>
+                        <a href="#">মুক্তমঞ্চ</a>
                     </li>
                     <li>
-                        <a href="#">শিক্ষা</a>
+                        <a href="#">প্রবাস-জীবন</a>
+                    </li>
+                    <li>
+                        <a href="#">শিল্পসাহিত্য</a>
+                    </li>
+                    <li>
+                        <a href="#">কৃষি</a>
+                    </li>
+                    <li>
+                        <a href="#">লাইফ-স্টাইল</a>
+                    </li>
+                    <li>
+                        <a href="#">ধর্ম</a>
+                    </li>
+                    <li>
+                        <a href="#">নারী ও শিশু</a>
+                    </li>
+                    <li>
+                        <a href="#">নৃগোষ্ঠী</a>
+                    </li>
+                    <li>
+                        <a href="#">পর্যটন</a>
+                    </li>
+                    <li>
+                        <a href="#">পরিবেশ ও প্রকৃতি</a>
+                    </li>
+                    <li>
+                        <a href="#">প্রেস বিজ্ঞপ্তি</a>
+                    </li>
+                    <li>
+                        <a href="#">বিশেষ দিবস</a>
                     </li>
                     <li>
                         <a href="#">বিজ্ঞান ও প্রযুক্তি</a>
                     </li>
                     <li>
-                        <a href="#">স্বাস্থ্য</a>
+                        <a href="#">শিক্ষা</a>
                     </li>
                     <li>
-                        <a href="#">জীবনযাপন</a>
+                        <a href="#">স্বাস্থ্য বার্তা</a>
                     </li>
                     <li>
-                        <a href="#">ভ্রমণ</a>
+                        <a href="#">সোশ্যাল মিডিয়া</a>
                     </li>
                     <li>
-                        <a href="#">খেলাধুলা</a>
+                        <a href="#">ফিচার</a>
                     </li>
                     <li>
-                        <a href="#">বিনোদন</a>
+                        <a href="#">সম্পাদকীয়</a>
                     </li>
                     <li>
-                        <a href="#">সাহিত্য</a>
+                        <a href="#">চাকরির খবর</a>
                     </li>
                 </ul>
             </section>
@@ -224,21 +274,6 @@
 
     <!-- MAIN SECTION -->
     <main class="z-1 relative w-100 h-auto">
-        <!-- MARQUEE -->
-        <section class="relative z-0 w-i bg-Dark">
-            <div class="marquee-container pad--10 relative f f-just-between res-container m-auto">
-                <marquee onmouseover="this.stop()" onmouseleave="this.start()">
-                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
-                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
-                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
-                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
-                </marquee>
-                <span class="text--14 bg-Sub-div h-100 pad--10 absolute pos-left-center">
-                    সর্বশেষ
-                </span>
-            </div>
-
-        </section>
 
         <div class="local-padding"></div>
 
@@ -246,12 +281,12 @@
         <menu class="md-container sun-lead-top relative w-100 h--250 res-container m-auto f gap--10">
 
             <!-- LEAD -->
-            <section class="relative h-i w-100 f f-just-between f-align-start f-col f-flex-1">
+            <section class="relative h-i w-100 f f-just-between f-align-start f-col f-flex-1 lead-hover-sun">
                 <span class="relative img-responsive h-80 w-100 f-flex-1">
                     <img class="obj-fit-w-h"
                         src="https://images.prothomalo.com/prothomalo-bangla%2F2024-09-29%2Fvthlwqwk%2FIRAN.jpg" alt="">
                 </span>
-                <a href="#" class="relative img-overlay bg-cat text-White">
+                <a href="#" class="relative img-overlay bg-cat text-White" id="sun-lead-url">
                     <h3 class="text-dotted-2 pad-l--05 anchor-White">আমাদের মধ্যে খুব ভালো জানানো হয়েছে। আমরা আপনাকে
                         সাহায্য করব এবং
                         আপনার জন্য উন্নতি প্রভাবিত করব</h3>
@@ -268,17 +303,19 @@
                 <!-- SOCIAL SHARES -->
                 <div class="lead-shares social-shares">
                     <ul class="f f-col">
-                        <li><a href="#"><img src="resources/icons/facebook.svg" alt="Facebook" title="Facebook"></a>
+                        <li data-platform="facebook" onclick="shareLinkLead(event)">
+                            <a href="#"><img src="resources/icons/facebook.svg" alt="Facebook" title="Facebook"></a>
                         </li>
-                        <li><a href="#"><img src="resources/icons/whatsapp.svg" alt="WhatsApp" title="WhatsApp"></a>
+                        <li data-platform="whatsapp" onclick="shareLinkLead(event)">
+                            <a href="#"><img src="resources/icons/whatsapp.svg" alt="WhatsApp" title="WhatsApp"></a>
                         </li>
-                        <li><a href="#"><img src="resources/icons/instagram.svg" alt="Instagram" title="Instagram"></a>
-                        </li>
-                        <li><a href="#"><img src="resources/icons/x.svg" alt="Twitter-X" title="Twitter-X"></a>
+                        <li data-platform="twitter-x" onclick="shareLinkLead(event)">
+                            <a href="#"><img src="resources/icons/x.svg" alt="Twitter-X" title="Twitter-X"></a>
                         </li>
                     </ul>
                 </div>
-                </div>
+
+
                 <!-- TOP -->
 
 
@@ -286,22 +323,22 @@
 
             <!-- TOP -->
             <section class="sun-tops relative h-i w-100 f-flex-1">
-                <div class="news-tops w-100 h-100 relative scroll-bar-sun-2 overflow-y-scroll">
+                <div class="news-tops w-100 h-100 relative overflow-none">
 
-                    <article class="sun-top-article relative f gap-10 pad--05 max-h--95 w-100">
-                        <span class="overflow-hidden">
-                            <img class="obj-fit-w-h border-rad--02 img-hover-scale"
+                    <article class="sun-top-article relative f gap-10 pad--05 w-100">
+                        <span class="f-flex-1 overflow-hidden">
+                            <img class="sun-top-article-img obj-fit-w-res border-rad--05 img-hover-scale"
                                 src="https://images.prothomalo.com/prothomalo-bangla%2F2024-06%2F556586f5-7728-4e5e-a80d-1b2bfbac650c%2FAFP_West_Indies_V_Afghanistan__1_.jpg"
                                 alt="">
                         </span>
-                        <a href="#" class="f f-col gap-05 text-color">
+                        <a href="#" class="f f-col f-flex-1 gap-05 text-color">
                             <!-- HEADING -->
-                            <h3 class="text--12" id="text-dotted-2-line">
+                            <h3 class="text--12 text-dotted-2 pad-l--01 m-t---02">
                                 অ্যাযুদ্ধবিরতি প্রস্তাব প্রত্যাখ্যান, লেবাননে সর্বশক্তি দিয়ে হামলার নির্দেশ
                                 নেতানিয়াহুরবাননে সর্বশক্তি দিয়ে হামলার নির্দেশ নেতানিয়াহুর
                             </h3>
                             <!-- DESCRIPTION -->
-                            <summary class="text--10 text-dotted-3">
+                            <summary class="text--10 text-dotted-3 pad-l--01">
                                 লেবাননের প্রধান অধিবেশন মন্ত্রীর কার্যকারিতায় আন্তর্জাতিক সম্প্রতিক্রিয়ার দ্বারা
                                 জন্মগ্রহণের সমস্যায় সহায়ক হয়েছেন। প্রধান
                                 অধিবেশন মন্ত্রীর জন্মগ্রহণের উদ্যোগে লেবাননের অনুমোদন প্রদান করা হয়েছেন
@@ -316,20 +353,20 @@
                         </a>
                     </article>
 
-                    <article class="sun-top-article relative f gap-10 pad--05 max-h--95 w-100">
-                        <span class="overflow-hidden">
-                            <img class="obj-fit-w-h border-rad--02 img-hover-scale"
+                    <article class="sun-top-article relative f gap-10 pad--05 w-100">
+                        <span class="f-flex-1 overflow-hidden">
+                            <img class="sun-top-article-img obj-fit-w-res border-rad--05 img-hover-scale"
                                 src="https://images.prothomalo.com/prothomalo-bangla%2F2024-06%2F556586f5-7728-4e5e-a80d-1b2bfbac650c%2FAFP_West_Indies_V_Afghanistan__1_.jpg"
                                 alt="">
                         </span>
-                        <a href="#" class="f f-col gap-05 text-color">
+                        <a href="#" class="f f-col f-flex-1 gap-05 text-color">
                             <!-- HEADING -->
-                            <h3 class="text--12" id="text-dotted-2-line">
+                            <h3 class="text--12 text-dotted-2 pad-l--01 m-t---02">
                                 অ্যাযুদ্ধবিরতি প্রস্তাব প্রত্যাখ্যান, লেবাননে সর্বশক্তি দিয়ে হামলার নির্দেশ
                                 নেতানিয়াহুরবাননে সর্বশক্তি দিয়ে হামলার নির্দেশ নেতানিয়াহুর
                             </h3>
                             <!-- DESCRIPTION -->
-                            <summary class="text--10 text-dotted-3">
+                            <summary class="text--10 text-dotted-3 pad-l--01">
                                 লেবাননের প্রধান অধিবেশন মন্ত্রীর কার্যকারিতায় আন্তর্জাতিক সম্প্রতিক্রিয়ার দ্বারা
                                 জন্মগ্রহণের সমস্যায় সহায়ক হয়েছেন। প্রধান
                                 অধিবেশন মন্ত্রীর জন্মগ্রহণের উদ্যোগে লেবাননের অনুমোদন প্রদান করা হয়েছেন
@@ -343,21 +380,20 @@
                             </div>
                         </a>
                     </article>
-
-                    <article class="sun-top-article relative f gap-10 pad--05 max-h--95 w-100">
-                        <span class="overflow-hidden">
-                            <img class="obj-fit-w-h border-rad--02 img-hover-scale"
+                    <article class="sun-top-article relative f gap-10 pad--05 w-100">
+                        <span class="f-flex-1 overflow-hidden">
+                            <img class="sun-top-article-img obj-fit-w-res border-rad--05 img-hover-scale"
                                 src="https://images.prothomalo.com/prothomalo-bangla%2F2024-06%2F556586f5-7728-4e5e-a80d-1b2bfbac650c%2FAFP_West_Indies_V_Afghanistan__1_.jpg"
                                 alt="">
                         </span>
-                        <a href="#" class="f f-col gap-05 text-color">
+                        <a href="#" class="f f-col f-flex-1 gap-05 text-color">
                             <!-- HEADING -->
-                            <h3 class="text--12" id="text-dotted-2-line">
+                            <h3 class="text--12 text-dotted-2 pad-l--01 m-t---02">
                                 অ্যাযুদ্ধবিরতি প্রস্তাব প্রত্যাখ্যান, লেবাননে সর্বশক্তি দিয়ে হামলার নির্দেশ
                                 নেতানিয়াহুরবাননে সর্বশক্তি দিয়ে হামলার নির্দেশ নেতানিয়াহুর
                             </h3>
                             <!-- DESCRIPTION -->
-                            <summary class="text--10 text-dotted-3">
+                            <summary class="text--10 text-dotted-3 pad-l--01">
                                 লেবাননের প্রধান অধিবেশন মন্ত্রীর কার্যকারিতায় আন্তর্জাতিক সম্প্রতিক্রিয়ার দ্বারা
                                 জন্মগ্রহণের সমস্যায় সহায়ক হয়েছেন। প্রধান
                                 অধিবেশন মন্ত্রীর জন্মগ্রহণের উদ্যোগে লেবাননের অনুমোদন প্রদান করা হয়েছেন
@@ -371,21 +407,20 @@
                             </div>
                         </a>
                     </article>
-
-                    <article class="sun-top-article relative f gap-10 pad--05 max-h--95 w-100">
-                        <span class="overflow-hidden">
-                            <img class="obj-fit-w-h border-rad--02 img-hover-scale"
+                    <article class="sun-top-article relative f gap-10 pad--05 w-100">
+                        <span class="f-flex-1 overflow-hidden">
+                            <img class="sun-top-article-img obj-fit-w-res border-rad--05 img-hover-scale"
                                 src="https://images.prothomalo.com/prothomalo-bangla%2F2024-06%2F556586f5-7728-4e5e-a80d-1b2bfbac650c%2FAFP_West_Indies_V_Afghanistan__1_.jpg"
                                 alt="">
                         </span>
-                        <a href="#" class="f f-col gap-05 text-color">
+                        <a href="#" class="f f-col f-flex-1 gap-05 text-color">
                             <!-- HEADING -->
-                            <h3 class="text--12" id="text-dotted-2-line">
+                            <h3 class="text--12 text-dotted-2 pad-l--01 m-t---02">
                                 অ্যাযুদ্ধবিরতি প্রস্তাব প্রত্যাখ্যান, লেবাননে সর্বশক্তি দিয়ে হামলার নির্দেশ
                                 নেতানিয়াহুরবাননে সর্বশক্তি দিয়ে হামলার নির্দেশ নেতানিয়াহুর
                             </h3>
                             <!-- DESCRIPTION -->
-                            <summary class="text--10 text-dotted-3">
+                            <summary class="text--10 text-dotted-3 pad-l--01">
                                 লেবাননের প্রধান অধিবেশন মন্ত্রীর কার্যকারিতায় আন্তর্জাতিক সম্প্রতিক্রিয়ার দ্বারা
                                 জন্মগ্রহণের সমস্যায় সহায়ক হয়েছেন। প্রধান
                                 অধিবেশন মন্ত্রীর জন্মগ্রহণের উদ্যোগে লেবাননের অনুমোদন প্রদান করা হয়েছেন
@@ -399,7 +434,6 @@
                             </div>
                         </a>
                     </article>
-
                 </div>
             </section>
 
@@ -409,7 +443,7 @@
                     <img class="img-w--60" src="resources/icons/chirkut.svg" alt="">
                 </span>
                 <div
-                    class="sun-chirkut-headings h-100 gap-10 f pad--10 flex-wrap f-justify-center f-col overflow-y-scroll scroll-bar-sun-2 hr-border">
+                    class="sun-chirkut-headings h-100 gap-10 f pad--10 flex-wrap f-justify-center f-col  overflow-none hr-border">
 
                     <!-- ARTICLE -->
                     <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
@@ -419,7 +453,108 @@
                         </span>
                         <div class="f f-col">
                             <a href="#" class="heading f f-align-items-center text-color">
-                                <h3 class="text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
+                                <h3 class="text--13 text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
+                                    হয়েছেন, দাবি ইসরায়েলের</h3>
+                            </a>
+                            <!-- TIMER -->
+                            <div class="f gap--05 f-align-items-center">
+                                <span class="w--08 h-100">
+                                    <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                </span>
+                                <p class="text--08">১ ঘন্টা আগে</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- ARTICLE -->
+                    <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
+                        <span class="sun-quote-chirkut">
+                            <img src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2023/05/04/bushra-afreen.jpg"
+                                alt="">
+                        </span>
+                        <div class="f f-col">
+                            <a href="#" class="heading f f-align-items-center text-color">
+                                <h3 class="text--13 text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
+                                    হয়েছেন, দাবি ইসরায়েলের</h3>
+                            </a>
+                            <!-- TIMER -->
+                            <div class="f gap--05 f-align-items-center">
+                                <span class="w--08 h-100">
+                                    <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                </span>
+                                <p class="text--08">১ ঘন্টা আগে</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- ARTICLE -->
+                    <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
+                        <span class="sun-quote-chirkut">
+                            <img src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2023/05/04/bushra-afreen.jpg"
+                                alt="">
+                        </span>
+                        <div class="f f-col">
+                            <a href="#" class="heading f f-align-items-center text-color">
+                                <h3 class="text--13 text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
+                                    হয়েছেন, দাবি ইসরায়েলের</h3>
+                            </a>
+                            <!-- TIMER -->
+                            <div class="f gap--05 f-align-items-center">
+                                <span class="w--08 h-100">
+                                    <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                </span>
+                                <p class="text--08">১ ঘন্টা আগে</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- ARTICLE -->
+                    <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
+                        <span class="sun-quote-chirkut">
+                            <img src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2023/05/04/bushra-afreen.jpg"
+                                alt="">
+                        </span>
+                        <div class="f f-col">
+                            <a href="#" class="heading f f-align-items-center text-color">
+                                <h3 class="text--13 text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
+                                    হয়েছেন, দাবি ইসরায়েলের</h3>
+                            </a>
+                            <!-- TIMER -->
+                            <div class="f gap--05 f-align-items-center">
+                                <span class="w--08 h-100">
+                                    <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                </span>
+                                <p class="text--08">১ ঘন্টা আগে</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- ARTICLE -->
+                    <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
+                        <span class="sun-quote-chirkut">
+                            <img src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2023/05/04/bushra-afreen.jpg"
+                                alt="">
+                        </span>
+                        <div class="f f-col">
+                            <a href="#" class="heading f f-align-items-center text-color">
+                                <h3 class="text--13 text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
+                                    হয়েছেন, দাবি ইসরায়েলের</h3>
+                            </a>
+                            <!-- TIMER -->
+                            <div class="f gap--05 f-align-items-center">
+                                <span class="w--08 h-100">
+                                    <img class="img-i" src="resources/icons/timer.svg" alt="">
+                                </span>
+                                <p class="text--08">১ ঘন্টা আগে</p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- ARTICLE -->
+                    <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
+                        <span class="sun-quote-chirkut">
+                            <img src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2023/05/04/bushra-afreen.jpg"
+                                alt="">
+                        </span>
+                        <div class="f f-col">
+                            <a href="#" class="heading f f-align-items-center text-color">
+                                <h3 class="text--13 text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
                                     হয়েছেন, দাবি ইসরায়েলের</h3>
                             </a>
                             <!-- TIMER -->
@@ -432,110 +567,6 @@
                         </div>
                     </article>
 
-                    <!-- ARTICLE -->
-                    <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
-                        <span class="sun-quote-chirkut">
-                            <img src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2023/05/04/bushra-afreen.jpg"
-                                alt="">
-                        </span>
-                        <div class="f f-col">
-                            <a href="#" class="heading f f-align-items-center text-color">
-                                <h3 class="text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
-                                    হয়েছেন, দাবি ইসরায়েলের</h3>
-                            </a>
-                            <!-- TIMER -->
-                            <div class="f gap--05 f-align-items-center">
-                                <span class="w--08 h-100">
-                                    <img class="img-i" src="resources/icons/timer.svg" alt="">
-                                </span>
-                                <p class="text--08">১ ঘন্টা আগে</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- ARTICLE -->
-                    <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
-                        <span class="sun-quote-chirkut">
-                            <img src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2023/05/04/bushra-afreen.jpg"
-                                alt="">
-                        </span>
-                        <div class="f f-col">
-                            <a href="#" class="heading f f-align-items-center text-color">
-                                <h3 class="text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
-                                    হয়েছেন, দাবি ইসরায়েলের</h3>
-                            </a>
-                            <!-- TIMER -->
-                            <div class="f gap--05 f-align-items-center">
-                                <span class="w--08 h-100">
-                                    <img class="img-i" src="resources/icons/timer.svg" alt="">
-                                </span>
-                                <p class="text--08">১ ঘন্টা আগে</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- ARTICLE -->
-                    <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
-                        <span class="sun-quote-chirkut">
-                            <img src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2023/05/04/bushra-afreen.jpg"
-                                alt="">
-                        </span>
-                        <div class="f f-col">
-                            <a href="#" class="heading f f-align-items-center text-color">
-                                <h3 class="text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
-                                    হয়েছেন, দাবি ইসরায়েলের</h3>
-                            </a>
-                            <!-- TIMER -->
-                            <div class="f gap--05 f-align-items-center">
-                                <span class="w--08 h-100">
-                                    <img class="img-i" src="resources/icons/timer.svg" alt="">
-                                </span>
-                                <p class="text--08">১ ঘন্টা আগে</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- ARTICLE -->
-                    <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
-                        <span class="sun-quote-chirkut">
-                            <img src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2023/05/04/bushra-afreen.jpg"
-                                alt="">
-                        </span>
-                        <div class="f f-col">
-                            <a href="#" class="heading f f-align-items-center text-color">
-                                <h3 class="text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
-                                    হয়েছেন, দাবি ইসরায়েলের</h3>
-                            </a>
-                            <!-- TIMER -->
-                            <div class="f gap--05 f-align-items-center">
-                                <span class="w--08 h-100">
-                                    <img class="img-i" src="resources/icons/timer.svg" alt="">
-                                </span>
-                                <p class="text--08">১ ঘন্টা আগে</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- ARTICLE -->
-                    <article class="relative f gap-10 max-h--100 w-100 f f-row f-just-center">
-                        <span class="sun-quote-chirkut">
-                            <img src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2023/05/04/bushra-afreen.jpg"
-                                alt="">
-                        </span>
-                        <div class="f f-col">
-                            <a href="#" class="heading f f-align-items-center text-color">
-                                <h3 class="text-dotted-2 pad-l--01">হিজবুল্লাহ নেতা হাসান নাসরুল্লাহ নিহত
-                                    হয়েছেন, দাবি ইসরায়েলের</h3>
-                            </a>
-                            <!-- TIMER -->
-                            <div class="f gap--05 f-align-items-center">
-                                <span class="w--08 h-100">
-                                    <img class="img-i" src="resources/icons/timer.svg" alt="">
-                                </span>
-                                <p class="text--08">১ ঘন্টা আগে</p>
-                            </div>
-                        </div>
-                    </article>
                 </div>
             </section>
 
@@ -673,7 +704,7 @@
                                         alt="">
                                 </span>
                                 <!-- NEWS DETAILS -->
-                                <div class="f f-col gap-02">
+                                <div class="f f-col gap-02 w-150">
                                     <!-- NEWS TITLE -->
                                     <h3 class="text-dotted-2 pad-l--01">লেবাননে হিজবুল্লাহর একজন নেতার
                                         অন্ত্যেষ্টিক্রিয়ায় সংগঠনের প্রধান হাসান নাসরুল্লাহর বড় প্রতিকৃতি হাতে দুই স্কাউট
@@ -807,7 +838,7 @@
                     </div>
 
                     <!-- NEWS LIST -->
-                    <ul class="f h-i f-col gap-10 pad--10 overflow-y-scroll scroll-bar-sun-2">
+                    <ul class="f h-i f-col gap-10 pad--10 overflow-y-scroll overflow-none">
                         <!-- NEWS -->
                         <li class="f j-just-between f-align-items-center gap-05">
                             <span class="sun-latest-circle"></span>
@@ -1669,9 +1700,9 @@
         <!-- LOGO -->
         <section class="res-container m-auto w-100 f f-just-between f-align-items-center pad-b--10">
             <!-- IMG -->
-            <span class="logo-footer relative h--30">
-                <img class="relative w-auto h-i" src="resources/sylhetsunlogo.png" alt="">
-            </span>
+            <a href="#" class="logo-footer relative h--30 sun-set-on-center">
+                <img class="relative w-auto h-i" src="resources/sylhetsunblack.svg" alt="">
+            </a>
             <!-- SOCIAL ICONS -->
             <div class="social-shares">
                 <ul class="f gap-10">
@@ -1781,6 +1812,33 @@
 </body>
 
 <script>
+    function shareLinkLead(event) {
+        const platform = event.currentTarget.getAttribute('data-platform');
+        
+        const currentUrl = document.getElementById('sun-lead-url').href;
+
+        let shareUrl = '';
+
+        switch (platform) {
+            case 'facebook':
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+                break;
+            case 'whatsapp':
+                shareUrl = `https://api.whatsapp.com/send?text=${currentUrl}`;
+                break;
+            case 'twitter-x':
+                shareUrl = `https://twitter.com/intent/tweet?url=${currentUrl}`;
+                break;
+            default:
+                console.error('Unsupported platform');
+                return;
+        }
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+
+
+
     function navToggle(event) {
         const navToggleBar = event.currentTarget;
         const ul = navToggleBar.querySelector('ul');
@@ -1863,26 +1921,25 @@
 
     }
 
-    function truncateTextAfterTwoLines(lHeight) {
-        const elements = document.querySelectorAll('#text-dotted-2-line');
-        elements.forEach(element => {
+    // function truncateTextAfterTwoLines(lHeight) {
+    //     const elements = document.querySelectorAll('#text-dotted-2-line');
+    //     elements.forEach(element => {
 
-            const computedStyle = window.getComputedStyle(element);
-            const fontSize = parseInt(computedStyle.fontSize, 10);
-            const lineHeight = fontSize * lHeight;
-            const twoLineHeight = lineHeight * 2;
-            console.log(lineHeight, twoLineHeight)
+    //         const computedStyle = window.getComputedStyle(element);
+    //         const fontSize = parseInt(computedStyle.fontSize, 10);
+    //         const lineHeight = fontSize * lHeight;
+    //         const twoLineHeight = lineHeight * 2;
 
-            let originalText = element.textContent.trim();
-            element.textContent = originalText;
+    //         let originalText = element.textContent.trim();
+    //         element.textContent = originalText;
 
-            while (element.scrollHeight > twoLineHeight && originalText.length > 0) {
-                originalText = originalText.slice(0, -1);
-                element.textContent = originalText + '...';
-            }
-        });
-    }
-    truncateTextAfterTwoLines(1.5);
+    //         while (element.scrollHeight > twoLineHeight && originalText.length > 0) {
+    //             originalText = originalText.slice(0, -1);
+    //             element.textContent = originalText + '...';
+    //         }
+    //     });
+    // }
+    // truncateTextAfterTwoLines(1.5);
 
 
 

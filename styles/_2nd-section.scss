@@ -99,15 +99,13 @@
 
     @include desktop-l {
         & {
-            max-height: 43rem;
+            max-height: 45rem;
         }
     }
 
     @include desktop {
         & {
-            max-height: 35rem;
+            max-height: 37rem;
         }
     }
-
-
 }

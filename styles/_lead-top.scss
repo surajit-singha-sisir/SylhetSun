@@ -52,6 +52,7 @@
     border: 1px solid var(--border);
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+    padding: 0.8rem 0;
 }
 
 .sun-chirkut {
@@ -94,12 +95,10 @@
 }
 
 .sun-top-article {
-    align-items: center;
+    padding: 1rem 0;
 
     .sun-top-article-img {
-        flex: 1;
-        min-width: 10rem;
-        height: 4rem;
+        max-height: 10rem;
     }
 }
 
@@ -111,5 +110,11 @@
     .sun-chirkut {
         flex: 1;
         max-width: 100%;
+    }
+}
+.lead-hover-sun {
+
+    &:hover a h3 {
+        text-decoration: underline;
     }
 }

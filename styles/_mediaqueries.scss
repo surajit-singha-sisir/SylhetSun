@@ -82,23 +82,3 @@
         overflow: auto;
     }
 }
-
-.sun-top-article {
-    @include tablet {
-        a h3 {
-            font-size: 1.1rem;
-        }
-
-        .text-dotted-2 {
-            display: flex;
-            overflow: visible !important;
-        }
-
-        summary {
-            -webkit-box-orient: block-axis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            overflow: hidden;
-        }
-    }
-}
