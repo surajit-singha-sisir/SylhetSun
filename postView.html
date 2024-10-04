@@ -7,11 +7,10 @@
     <title>Sylhet Sun Index</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.0.01/mastors.css">
-    <script src="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.0.01/mastors.js"></script>
     <link href="https://fonts.cdnfonts.com/css/solaimanlipi" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/scripts.js"></script>
 
 </head>
 
@@ -80,43 +79,39 @@
     <!-- NAVIGATION BAR -->
     <nav class="nav-bar z-5 sticky-top bg-cat w-100">
         <div class="relative z-i res-container bg-cat m-auto f f-just-between f-align-items-center">
+            <!-- HOME -->
             <section>
                 <a class="h--15 w-auto" href="#">
                     <img class="h-i w-i" src="resources/icons/home.svg" alt="">
                 </a>
             </section>
-
+            <!-- CATEGORY -->
             <section>
                 <ul class="sun-navigation f gap--10 f-wrap f-just-center f-align-items-center text--15">
                     <li>
-                        <a href="#" class="anchor-White">প্রচ্ছদ</a>
+                        <a href="#" class="anchor-White">জাতীয়</a>
                     </li>
                     <li class="nav-toggle-bar relative f gap--05 f-align-items-center" onclick="navToggle(event)">
-                        <a href="#" class="anchor-White">সিলেট</a> <img class="img-rotate-45 cur-pointer"
-                            src="resources/icons/chevron-down.svg" alt="">
-
-                        <ul class="absolute bg-cat pad--10 pos-t-center f f-col gap--10">
+                        <div class="anchor-White cur-pointer">
+                            সিলেট
+                            <img class="img-rotate-45 cur-pointer" src="resources/icons/chevron-down.svg" alt="">
+                        </div>
+                        <ul class="absolute bg-cat pad--10 pos-t-center z-4 f f-col gap--10">
+                            <li><a href="#" class="anchor-White">মহানগর</a></li>
                             <li><a href="#" class="anchor-White">সিলেট</a></li>
                             <li><a href="#" class="anchor-White">সুনামগঞ্জ</a></li>
                             <li><a href="#" class="anchor-White">হবিগঞ্জ</a></li>
                             <li><a href="#" class="anchor-White">মৌলভীবাজার</a></li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="anchor-White">জাতীয়</a>
                     </li>
                     <li>
                         <a href="#" class="anchor-White">রাজনীতি</a>
                     </li>
-                    <li class="nav-toggle-bar relative f gap--05 f-align-items-center" onclick="navToggle(event)">
-                        <a href="#" class="anchor-White">সিলেট</a> <img class="img-rotate-45 cur-pointer"
-                            src="resources/icons/chevron-down.svg" alt="">
-                        <ul class="absolute bg-cat pad--10 pos-t-center f f-col gap--10">
-                            <li><a href="#" class="anchor-White">সিলেট</a></li>
-                            <li><a href="#" class="anchor-White">সুনামগঞ্জ</a></li>
-                            <li><a href="#" class="anchor-White">হবিগঞ্জ</a></li>
-                            <li><a href="#" class="anchor-White">মৌলভীবাজার</a></li>
-                        </ul>
+                    <li>
+                        <a href="#" class="anchor-White">অর্থনীতি</a>
+                    </li>
+                    <li>
+                        <a href="#" class="anchor-White">আন্তর্জাতিক</a>
                     </li>
                     <li>
                         <a href="#" class="anchor-White">খেলাধুলা</a>
@@ -125,99 +120,153 @@
                         <a href="#" class="anchor-White">বিনোদন</a>
                     </li>
                     <li>
-                        <a href="#" class="anchor-White">মুক্তিযুদ্ধ</a>
-                    </li>
-                    <li>
-                        <a href="#" class="anchor-White">তথ্য ও প্রযুক্তি</a>
+                        <a href="#" class="anchor-White">আইন-আদালত</a>
                     </li>
                 </ul>
             </section>
-
+            <!-- HAMBURGER -->
             <section class="hamburger cur-pointer" onclick="hamburgerToggle()">
                 <span></span>
                 <span></span>
                 <span></span>
             </section>
         </div>
+        <!-- MARQUEE -->
+        <section class="relative z-0 w-i bg-Dark sun-mark-shadow-btm">
+            <div class="marquee-container pad--10 relative f f-just-between res-container m-auto">
+                <marquee onmouseover="this.stop()" onmouseleave="this.start()">
+                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
+                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
+                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
+                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
+                </marquee>
+                <span class="text--13 bg-Sub-div h-100 pad--05 absolute pos-left-center">
+                    সর্বশেষ
+                </span>
+            </div>
+
+        </section>
+
         <!-- RESPOSIVE -->
         <span class="relative z-4 f f-col w-100 pad--05 hamb-shows hide">
             <hr class="bg-Border">
 
             <section class="hamb-container scroll-bar-sun res-container m-auto pad-t--10">
-                <ul class="f gap--10 text--15 f-col">
+                <ul class="f gap--10 text--15 pad-t--10 pad-b--30 f-col">
+
                     <li>
-                        <a href="#">ফোন টেলিফোন</a>
+                        <a href="#" class="anchor-White">জাতীয়</a>
                     </li>
                     <li>
-                        <a href="#">ইমেইল</a>
-                    </li>
-                    <li>
-                        <a href="#">ক্যাটেগনারিজমেন্ট</a>
-                    </li>
-                    <li>
-                        <a href="#">জাতীয় প্রযুক্তি</a>
+                        <a href="#">সিলেট</a>
                         <ul class="ham-sub-cat f f-col f-wrap text--13 text-darker">
                             <li>
                                 <a class="f gap--05 f-align-items-center" href="#">
                                     <img src="resources/icons/chevron-double.svg" alt="">
-                                    <p>আপামর</p>
+                                    <p>মহানগর</p>
                                 </a>
                             </li>
                             <li>
                                 <a class="f gap--05 f-align-items-center" href="#">
                                     <img src="resources/icons/chevron-double.svg" alt="">
-                                    <p>আপামর</p>
+                                    <p>সিলেট</p>
                                 </a>
                             </li>
                             <li>
                                 <a class="f gap--05 f-align-items-center" href="#">
                                     <img src="resources/icons/chevron-double.svg" alt="">
-                                    <p>আপামর</p>
+                                    <p>সুনামগঞ্জ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="f gap--05 f-align-items-center" href="#">
+                                    <img src="resources/icons/chevron-double.svg" alt="">
+                                    <p>হবিগঞ্জ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="f gap--05 f-align-items-center" href="#">
+                                    <img src="resources/icons/chevron-double.svg" alt="">
+                                    <p>মৌলভীবাজার</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">জাতীয় সিলেট</a>
+                        <a href="#" class="anchor-White">রাজনীতি</a>
                     </li>
                     <li>
-                        <a href="#">নিবন্ধন</a>
+                        <a href="#" class="anchor-White">অর্থনীতি</a>
                     </li>
                     <li>
-                        <a href="#">আবেদন</a>
+                        <a href="#" class="anchor-White">আন্তর্জাতিক</a>
                     </li>
                     <li>
-                        <a href="#">রাজনীতি</a>
+                        <a href="#" class="anchor-White">খেলাধুলা</a>
                     </li>
                     <li>
-                        <a href="#">আন্তর্জাতিক</a>
+                        <a href="#" class="anchor-White">বিনোদন</a>
                     </li>
                     <li>
-                        <a href="#">অর্থনীতি</a>
+                        <a href="#" class="anchor-White">আইন-আদালত</a>
+                    </li>
+
+                    <li>
+                        <a href="#">মুক্তমঞ্চ</a>
                     </li>
                     <li>
-                        <a href="#">শিক্ষা</a>
+                        <a href="#">প্রবাস-জীবন</a>
+                    </li>
+                    <li>
+                        <a href="#">শিল্পসাহিত্য</a>
+                    </li>
+                    <li>
+                        <a href="#">কৃষি</a>
+                    </li>
+                    <li>
+                        <a href="#">লাইফ-স্টাইল</a>
+                    </li>
+                    <li>
+                        <a href="#">ধর্ম</a>
+                    </li>
+                    <li>
+                        <a href="#">নারী ও শিশু</a>
+                    </li>
+                    <li>
+                        <a href="#">নৃগোষ্ঠী</a>
+                    </li>
+                    <li>
+                        <a href="#">পর্যটন</a>
+                    </li>
+                    <li>
+                        <a href="#">পরিবেশ ও প্রকৃতি</a>
+                    </li>
+                    <li>
+                        <a href="#">প্রেস বিজ্ঞপ্তি</a>
+                    </li>
+                    <li>
+                        <a href="#">বিশেষ দিবস</a>
                     </li>
                     <li>
                         <a href="#">বিজ্ঞান ও প্রযুক্তি</a>
                     </li>
                     <li>
-                        <a href="#">স্বাস্থ্য</a>
+                        <a href="#">শিক্ষা</a>
                     </li>
                     <li>
-                        <a href="#">জীবনযাপন</a>
+                        <a href="#">স্বাস্থ্য বার্তা</a>
                     </li>
                     <li>
-                        <a href="#">ভ্রমণ</a>
+                        <a href="#">সোশ্যাল মিডিয়া</a>
                     </li>
                     <li>
-                        <a href="#">খেলাধুলা</a>
+                        <a href="#">ফিচার</a>
                     </li>
                     <li>
-                        <a href="#">বিনোদন</a>
+                        <a href="#">সম্পাদকীয়</a>
                     </li>
                     <li>
-                        <a href="#">সাহিত্য</a>
+                        <a href="#">চাকরির খবর</a>
                     </li>
                 </ul>
             </section>
@@ -227,22 +276,6 @@
 
     <!-- MAIN SECTION -->
     <main class="z-1 relative w-100 h-auto">
-        <!-- MARQUEE -->
-        <section class="relative z-0 w-i bg-Dark">
-            <div class="marquee-container pad--10 relative f f-just-between res-container m-auto">
-                <marquee onmouseover="this.stop()" onmouseleave="this.start()">
-                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
-                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
-                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
-                    <a href="#">সিলেট-সুনামগঞ্জে ফের বন্যার শঙ্কা</a>
-                </marquee>
-                <span class="text--14 bg-Sub-div h-100 pad--10 absolute pos-left-center">
-                    সর্বশেষ
-                </span>
-            </div>
-
-        </section>
-
         <div class="local-padding"></div>
 
         <section class="relative g-res-3-col-container gap-10 res-container m-auto">
@@ -275,8 +308,8 @@
                         <h1 class="text--20 pad-t--05">লেবাননে স্থল অভিযান শুরু করেছে ইসরায়েলি বাহিনী</h1>
                     </div>
 
-                    <hgroup class="z-5 sticky t--35 f gap-10 pad-b--15 f-wrap f-just-between f-align-items-center"
-                        id="onstickychange">
+                    <hgroup class="z-5 t--35 f gap-10 pad-b--15 f-wrap f-just-between f-align-items-center"
+                        id="onstickychange" data-top-height="">
                         <!-- PROTIBEDOK -->
                         <div class="f f-col" id="onstickyhide">
                             <!-- SUBTITLE -->
@@ -761,195 +794,6 @@
 
 <script>
 
-    function navToggle(event) {
-        const navToggleBar = event.currentTarget;
-        const ul = navToggleBar.querySelector('ul');
-        const img = navToggleBar.querySelector('img');
-
-        if (ul.classList.contains('show')) {
-
-            img.classList.add('img-rotate-15');
-            ul.classList.remove('show');
-        } else {
-            img.classList.remove('img-rotate-45');
-            ul.classList.add('show');
-        }
-
-        document.addEventListener('click', function (e) {
-            if (!e.target.closest('.nav-toggle-bar')) {
-                ul.classList.remove('show');
-                img.classList.add('img-rotate-45');
-            }
-        });
-    }
-
-
-    function hamburgerToggle() {
-        const hambData = document.querySelector('.hamb-shows');
-        const isHidden = hambData.classList.contains('hide');
-        const body = document.querySelector('body');
-        body.classList.toggle('overflow-hidden');
-
-        const addOverflow = document.querySelector('nav.nav-bar');
-
-        addOverflow.classList.toggle('nav-overflow');
-
-        // HAMBURGER ICON CHANGE
-        const spans = document.querySelectorAll('.hamburger span');
-        spans[0].classList.toggle('hamb-rotate-1');
-        spans[1].classList.toggle('hamb-rotate-2');
-        spans[2].classList.toggle('hamb-rotate-3');
-
-
-
-        if (isHidden) {
-            hambData.style.transition = 'transform 0.3s ease-in-out';
-            hambData.style.transform = 'translateY(-100%)';
-
-            setTimeout(() => {
-                hambData.style.transform = 'translateY(0)';
-            }, 10);
-
-            hambData.classList.remove('hide');
-
-        } else {
-            hambData.style.transition = 'transform 0.3s ease-in-out';
-            hambData.style.transform = 'translateY(-100%)';
-
-            setTimeout(() => {
-                hambData.classList.add('hide');
-            }, 300);
-        }
-
-        document.addEventListener('click', function (event) {
-            const hambData = document.querySelector('.hamb-shows');
-            const hamburger = document.querySelector('.hamburger');
-
-            if (!hamburger.contains(event.target) && !hambData.contains(event.target)) {
-                hambData.style.transition = 'transform 0.3s ease-in-out';
-                hambData.style.transform = 'translateY(-100%)';
-
-
-                spans[0].classList.remove('hamb-rotate-1');
-                spans[1].classList.remove('hamb-rotate-2');
-                spans[2].classList.remove('hamb-rotate-3');
-                body.classList.remove('overflow-hidden');
-
-                setTimeout(() => {
-                    addOverflow.classList.remove('nav-overflow');
-                    hambData.classList.add('hide');
-                }, 300);
-            }
-        });
-
-    }
-
-    // print = console.log;
-
-
-
-    // SHARE SOCIAL
-    function shareLink(event) {
-        const a = event.querySelector('i');
-        const href = a.getAttribute('href');
-        const url = window.location.href;
-        const windowFeatures = 'width=600, height=400, scrollbars=no, resizable=no';
-
-        // FACEBOOK SHARE
-        if (a.classList.contains('fa-facebook-f')) {
-            const shareUrl = 'https://www.facebook.com/sharer.php?u=' + encodeURIComponent(url);
-            window.open(shareUrl, '_blank', windowFeatures);
-        }
-
-        // MESSENGER SHARE
-        if (a.classList.contains('fa-facebook-messenger')) {
-            const shareUrl = 'https://m.me/?link=' + encodeURIComponent(url);
-            window.open(shareUrl, '_blank', windowFeatures);
-        }
-
-
-
-        // TWITTER-X SHARE
-        if (a.classList.contains('fa-x-twitter')) {
-            const shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent('Check this out!');
-            window.open(shareUrl, '_blank', windowFeatures);
-        }
-
-
-        // WHATSAPP SHARE
-        if (a.classList.contains('fa-whatsapp')) {
-            const shareUrl = 'https://wa.me/' + href + '?text=' + encodeURIComponent(url);
-            window.open(shareUrl, '_blank', windowFeatures);
-        }
-
-        // LINKEDIN SHARE
-        if (a.classList.contains('fa-linkedin')) {
-            const shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
-            window.open(shareUrl, '_blank', windowFeatures);
-        }
-
-    }
-
-    // INCREASE FONT SIZE
-    function plusButton() {
-        const article = document.getElementById('article');
-        const fontSize = parseFloat(window.getComputedStyle(article).getPropertyValue('font-size'));
-
-        if (fontSize >= 32) {
-            alert("Maximum font size reached.");
-        } else {
-            article.style.fontSize = (fontSize + 1) + 'px';
-        }
-    }
-
-    // DECREASE FONT SIZE
-    function minusButton() {
-        const article = document.getElementById('article');
-        const fontSize = parseFloat(window.getComputedStyle(article).getPropertyValue('font-size'));
-
-        if (fontSize <= 14) {
-            alert("Minimum font size reached.");
-        } else {
-            article.style.fontSize = (fontSize - 1) + 'px';
-        }
-    }
-
-    function onstickyhide() {
-        const hideContainer = document.getElementById('onstickyhide');
-        const onstickychange = document.getElementById('onstickychange');
-        const sunsocialshares = document.getElementById('sun-social-shares');
-
-        function operation() {
-            const currentHeight = window.pageYOffset;
-
-            if (currentHeight > 500) {
-                hideContainer.classList.add('hide');
-                onstickychange.classList.remove('f-just-between');
-                onstickychange.classList.add('f-just-center');
-                sunsocialshares.classList.add('social-shares-gradient');
-
-            } else {
-                hideContainer.classList.remove('hide');
-                onstickychange.classList.add('f-just-between');
-                onstickychange.classList.remove('f-just-center');
-                sunsocialshares.classList.remove('social-shares-gradient');
-            }
-        }
-
-        function handleSize() {
-            const width = window.innerWidth;
-            if (width < 768) {
-                window.addEventListener('touchmove', operation);
-            } else {
-                window.addEventListener('scroll', operation);
-            }
-        }
-        handleSize();
-
-
-
-    }
-    onstickyhide();
 </script>
 
 </html>

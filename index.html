@@ -7,9 +7,8 @@
     <title>Sylhet Sun Index</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://surajit-singha-sisir.github.io/mastorsCDN/mastors.css">
-    <script src="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.0.03/mastors.js"></script>
     <link href="https://fonts.cdnfonts.com/css/solaimanlipi" rel="stylesheet">
-
+    <script src="scripts/scripts.js"></script>
 </head>
 
 <body class="scroll-bar-sun">
@@ -33,7 +32,6 @@
         </div>
         <hr class="b-bottom">
     </header>
-
 
     <!-- SHORT NEWS -->
     <header class="z-6 relative res-container top-shorts f gap--10 pad-tb--20 w-100 h-auto m-auto">
@@ -1812,167 +1810,7 @@
 </body>
 
 <script>
-    function shareLinkLead(event) {
-        const platform = event.currentTarget.getAttribute('data-platform');
-        
-        const currentUrl = document.getElementById('sun-lead-url').href;
 
-        let shareUrl = '';
-
-        switch (platform) {
-            case 'facebook':
-                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
-                break;
-            case 'whatsapp':
-                shareUrl = `https://api.whatsapp.com/send?text=${currentUrl}`;
-                break;
-            case 'twitter-x':
-                shareUrl = `https://twitter.com/intent/tweet?url=${currentUrl}`;
-                break;
-            default:
-                console.error('Unsupported platform');
-                return;
-        }
-        window.open(shareUrl, '_blank', 'width=600,height=400');
-    }
-
-
-
-
-    function navToggle(event) {
-        const navToggleBar = event.currentTarget;
-        const ul = navToggleBar.querySelector('ul');
-        const img = navToggleBar.querySelector('img');
-
-        if (ul.classList.contains('show')) {
-            ul.classList.remove('show');
-            img.classList.add('img-rotate-45');
-        } else {
-            img.classList.remove('img-rotate-45');
-            ul.classList.add('show');
-        }
-
-        document.addEventListener('click', function (e) {
-            if (!e.target.closest('.nav-toggle-bar')) {
-                ul.classList.remove('show');
-                img.classList.add('img-rotate-45');
-            }
-        });
-    }
-
-
-    function hamburgerToggle() {
-        const hambData = document.querySelector('.hamb-shows');
-        const isHidden = hambData.classList.contains('hide');
-        const body = document.querySelector('body');
-        body.classList.toggle('overflow-hidden');
-
-        const addOverflow = document.querySelector('nav.nav-bar');
-
-        addOverflow.classList.toggle('nav-overflow');
-
-        // HAMBURGER ICON CHANGE
-        const spans = document.querySelectorAll('.hamburger span');
-        spans[0].classList.toggle('hamb-rotate-1');
-        spans[1].classList.toggle('hamb-rotate-2');
-        spans[2].classList.toggle('hamb-rotate-3');
-
-
-
-        if (isHidden) {
-            hambData.style.transition = 'transform 0.3s ease-in-out';
-            hambData.style.transform = 'translateY(-100%)';
-
-            setTimeout(() => {
-                hambData.style.transform = 'translateY(0)';
-            }, 10);
-
-            hambData.classList.remove('hide');
-
-        } else {
-            hambData.style.transition = 'transform 0.3s ease-in-out';
-            hambData.style.transform = 'translateY(-100%)';
-
-            setTimeout(() => {
-                hambData.classList.add('hide');
-            }, 300);
-        }
-
-        document.addEventListener('click', function (event) {
-            const hambData = document.querySelector('.hamb-shows');
-            const hamburger = document.querySelector('.hamburger');
-
-            if (!hamburger.contains(event.target) && !hambData.contains(event.target)) {
-                hambData.style.transition = 'transform 0.3s ease-in-out';
-                hambData.style.transform = 'translateY(-100%)';
-
-
-                spans[0].classList.remove('hamb-rotate-1');
-                spans[1].classList.remove('hamb-rotate-2');
-                spans[2].classList.remove('hamb-rotate-3');
-                body.classList.remove('overflow-hidden');
-
-                setTimeout(() => {
-                    addOverflow.classList.remove('nav-overflow');
-                    hambData.classList.add('hide');
-                }, 300);
-            }
-        });
-
-    }
-
-    // function truncateTextAfterTwoLines(lHeight) {
-    //     const elements = document.querySelectorAll('#text-dotted-2-line');
-    //     elements.forEach(element => {
-
-    //         const computedStyle = window.getComputedStyle(element);
-    //         const fontSize = parseInt(computedStyle.fontSize, 10);
-    //         const lineHeight = fontSize * lHeight;
-    //         const twoLineHeight = lineHeight * 2;
-
-    //         let originalText = element.textContent.trim();
-    //         element.textContent = originalText;
-
-    //         while (element.scrollHeight > twoLineHeight && originalText.length > 0) {
-    //             originalText = originalText.slice(0, -1);
-    //             element.textContent = originalText + '...';
-    //         }
-    //     });
-    // }
-    // truncateTextAfterTwoLines(1.5);
-
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const items = document.querySelectorAll('.items .inner-item');
-        let currentIndex = 0;
-        const totalItems = items.length;
-        const delay = 5000;
-        let sliderInterval;
-
-        items.forEach(item => {
-            item.classList.add('transform-out');
-        });
-
-        function moveToNextSlide() {
-            items[currentIndex].classList.remove('active');
-            items[currentIndex].classList.add('transform-out');
-            currentIndex = (currentIndex + 1) % totalItems;
-            items[currentIndex].classList.remove('transform-in', 'transform-out');
-            items[currentIndex].classList.add('active', 'transform-in');
-        }
-
-        items[currentIndex].classList.add('active');
-        sliderInterval = setInterval(moveToNextSlide, delay);
-
-        items.forEach(item => {
-            item.addEventListener('click', function () {
-                moveToNextSlide();
-                clearInterval(sliderInterval);
-                sliderInterval = setInterval(moveToNextSlide, delay);
-            });
-        });
-    });
 
 
 
