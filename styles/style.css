@@ -221,8 +221,10 @@ li {
 
 .obj-fit-h-res {
   position: relative;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   height: 100%;
   width: auto;
   aspect-ratio: 4/3;
@@ -230,8 +232,10 @@ li {
 
 .obj-fit-w-res {
   position: relative;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 100%;
   height: auto;
   aspect-ratio: 4/3;
@@ -239,8 +243,10 @@ li {
 
 .obj-fit-w-h {
   position: relative;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 100%;
   height: 100%;
   aspect-ratio: 4/3;
@@ -343,6 +349,7 @@ li {
   visibility: hidden;
   border-radius: 1rem;
   background: var(--dark-color);
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .overflow-none:hover {
@@ -353,6 +360,7 @@ li {
 }
 .overflow-none:hover::-webkit-scrollbar-thumb {
   visibility: visible;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 @media only screen and (max-width: 768px) {
@@ -366,6 +374,46 @@ li {
   .overflow-none::-webkit-scrollbar-thumb {
     background-color: transparent;
   }
+}
+
+.grid-4-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
+  grid-template-rows: auto;
+}
+.grid-4-col [class^=column] {
+  grid-column: span 1;
+}
+.grid-4-col [class*=span-1] {
+  grid-column: span 1;
+}
+.grid-4-col [class*=span-2] {
+  grid-column: span 2;
+}
+.grid-4-col [class*=span-3] {
+  grid-column: span 3;
+}
+.grid-4-col [class*=span-4] {
+  grid-column: span 4;
+}
+.grid-4-col [class*=span-5] {
+  grid-column: span 5;
+}
+.grid-4-col [class*=span-6] {
+  grid-column: span 6;
+}
+.grid-4-col [class*=span-7] {
+  grid-column: span 7;
+}
+.grid-4-col [class*=span-8] {
+  grid-column: span 8;
+}
+.grid-4-col [class*=span-9] {
+  grid-column: span 9;
+}
+.grid-4-col [class*=span-10] {
+  grid-column: span 10;
 }
 
 .b-bottom {
@@ -386,8 +434,10 @@ li {
 
 .obj-fit-h {
   border-radius: 0.5rem;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   height: 100%;
   aspect-ratio: 4/3;
 }
@@ -606,8 +656,10 @@ li {
 .lead-shares ul li img {
   width: 100%;
   height: 0.5rem;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .news-tops {
@@ -644,6 +696,7 @@ li {
   border-radius: 50%;
   overflow: hidden;
   width: 10rem;
+  height: -moz-min-content;
   height: min-content;
   aspect-ratio: 1;
   border: 1px solid var(--sub-div-color);
@@ -651,8 +704,10 @@ li {
 .sun-quote-chirkut img {
   width: 100%;
   height: 120%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .sun-top-article {
@@ -964,8 +1019,10 @@ li {
 .slider-1fr .items .inner-item img {
   width: inherit;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .slider-1fr .items .transform-in {
   transform: translateY(100%);
@@ -1055,13 +1112,15 @@ li {
 @media only screen and (max-width: 2560px) {
   .g-row-gap-15 {
     row-gap: 0;
-    column-gap: 1.5rem;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
   }
 }
 @media only screen and (max-width: 768px) {
   .g-row-gap-15 {
     row-gap: 1.5rem;
-    column-gap: 0;
+    -moz-column-gap: 0;
+         column-gap: 0;
   }
 }
 
@@ -1203,6 +1262,11 @@ article {
   .sun-social-shares .share-wave i {
     font-size: 0.7rem;
   }
+}
+
+.tags-define-sun {
+  border: 1px solid var(--border);
+  padding: 1rem;
 }
 
 .sun-cat-tags {
@@ -1393,6 +1457,4 @@ article {
 .sunGetMoreData button:hover {
   background-color: var(--span-color);
   transition: background-color 0.3s ease-in-out;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

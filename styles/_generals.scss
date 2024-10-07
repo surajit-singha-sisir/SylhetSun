@@ -242,3 +242,54 @@ li {
     }
 
 }
+
+.grid-4-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 100%;
+    grid-template-rows: auto;
+
+    & [class^="column"] {
+        grid-column: span 1;
+    }
+
+    & [class*="span-1"] {
+        grid-column: span 1;
+    }
+
+    & [class*="span-2"] {
+        grid-column: span 2;
+    }
+
+    & [class*="span-3"] {
+        grid-column: span 3;
+    }
+
+    & [class*="span-4"] {
+        grid-column: span 4;
+    }
+
+    & [class*="span-5"] {
+        grid-column: span 5;
+    }
+
+    & [class*="span-6"] {
+        grid-column: span 6;
+    }
+
+    & [class*="span-7"] {
+        grid-column: span 7;
+    }
+
+    & [class*="span-8"] {
+        grid-column: span 8;
+    }
+
+    & [class*="span-9"] {
+        grid-column: span 9;
+    }
+
+    & [class*="span-10"] {
+        grid-column: span 10;
+    }
+}
