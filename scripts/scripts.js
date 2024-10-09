@@ -1,5 +1,3 @@
-
-print = console.log;
 // ----------------------
 //   INDEX PAGE START
 // ----------------------
@@ -401,7 +399,89 @@ window.addEventListener('load', function () {
 
 
 
+// Get news ID from the URL (assuming news ID is part of the URL)
+function getNewsId() {
+    const urlLink = window.location.href;
+    return urlLink.split('/').pop().split('?')[0]; // Extract the news ID from the URL
+}
 
+// Load user's vote status from localStorage per news item
+let newsId = getNewsId();
+let userVote = localStorage.getItem(`userVote_${newsId}`) || null; // Unique key for each news
+let activeVote = null; // Holds the currently active vote
+
+// Variable to track if the user has voted
+let votePending = false;
+let pendingVoteRating = null;
+
+// Check localStorage for previously voted item and apply styles
+window.onload = function () {
+    if (userVote) {
+        activateVote(userVote);
+    }
+}
+
+// Function to handle voting
+function vote(rating) {
+    let counterElement = document.getElementById(`${rating}-counter`);
+    let iconElement = document.getElementById(`${rating}-icon`);
+
+    if (userVote === rating) {
+        // If the user clicks the same vote again, undo the vote
+        counterElement.textContent = 0; // Vote reset to 0
+        iconElement.classList.remove('active'); // Remove color
+        localStorage.removeItem(`userVote_${newsId}`);  // Remove from localStorage
+        userVote = null;  // Clear active vote
+        votePending = false; // Reset vote pending flag
+        pendingVoteRating = null; // Clear pending vote
+    } else {
+        // Remove previous vote (if any)
+        if (userVote) {
+            let prevCounter = document.getElementById(`${userVote}-counter`);
+            let prevIcon = document.getElementById(`${userVote}-icon`);
+            prevCounter.textContent = 0; // Reset previous vote to 0
+            prevIcon.classList.remove('active'); // Remove color from previous icon
+        }
+
+        // Apply new vote
+        counterElement.textContent = 1; // Set vote to 1
+        iconElement.classList.add('active'); // Apply active color
+        localStorage.setItem(`userVote_${newsId}`, rating);  // Store new vote in localStorage with unique news ID
+        userVote = rating; // Update active vote
+        votePending = true; // Set vote pending flag
+        pendingVoteRating = rating; // Set pending vote
+    }
+}
+
+// Function to apply active state on page load if already voted
+function activateVote(rating) {
+    let iconElement = document.getElementById(`${rating}-icon`);
+    let counterElement = document.getElementById(`${rating}-counter`);
+    counterElement.textContent = 1;
+    iconElement.classList.add('active');
+}
+
+// Function to send vote to server
+function sendVoteToServer(rating) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://sylhetsun.net/news/news_vote', true);
+    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+
+    const csrfToken = getCookie('csrftoken');
+    xhr.setRequestHeader('X-CSRFToken', csrfToken);
+
+    xhr.send(JSON.stringify({ rating: rating, newsId: newsId }));
+
+    console.log('Vote sent for:', rating);
+}
+
+// Send the vote only when the user leaves the window or tab
+window.addEventListener('beforeunload', function (event) {
+    if (votePending && pendingVoteRating) {
+        // Prevent the default action of the beforeunload event
+        sendVoteToServer(pendingVoteRating); // Send the pending vote
+    }
+});
 
 
 

@@ -148,7 +148,56 @@ article {
         }
     }
 }
+
 .tags-define-sun {
     border: 1px solid var(--border);
     padding: 1rem;
+}
+
+// RATING
+.rateNews-sun {
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 1px solid var(--dark-color);
+
+    legend {
+        font-size: 1.5rem;
+        color: #007bff;
+        padding: 1rem 0.5rem;
+    }
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.rating-item {
+    text-align: center;
+}
+
+.rating-item span {
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.rating-item span.active {
+    color: #007bff;
+}
+
+.rating-item p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.rating-item h1 {
+    text-align: center;
+}
+
+.news-content {
+    margin: 20px 0;
 }

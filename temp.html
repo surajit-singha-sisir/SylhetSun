@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Rating</title>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .rating-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .rating-item {
+            text-align: center;
+        }
+
+        .rating-item span {
+            font-size: 30px;
+            cursor: pointer;
+            color: #000;
+            transition: color 0.3s;
+        }
+
+        .rating-item span.active {
+            color: #007bff;
+        }
+
+        .rating-item p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .rating-item h1 {
+            text-align: center;
+        }
+
+        .news-content {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>News Title</h1>
+    <div class="news-content">
+        <p>This is the content of the news article. It can be a detailed article about any topic that the news portal
+            covers.</p>
+    </div>
+
+    <!-- Rating Section -->
+    <div class="rating-container">
+        <div class="rating-item">
+            <span id="best-icon" class="material-icons" onclick="vote('best')">sentiment_very_satisfied</span>
+            <p id="best-counter">0</p>
+        </div>
+        <div class="rating-item">
+            <span id="good-icon" class="material-icons" onclick="vote('good')">sentiment_satisfied</span>
+            <p id="good-counter">0</p>
+        </div>
+        <div class="rating-item">
+            <span id="worst-icon" class="material-icons" onclick="vote('worst')">sentiment_very_dissatisfied</span>
+            <p id="worst-counter">0</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Load user's vote status from localStorage
+        let userVote = localStorage.getItem('userVote') || null; // null if no vote
+        let activeVote = null; // Holds the currently active vote
+
+        // Check localStorage for previously voted item and apply styles
+        window.onload = function () {
+            if (userVote) {
+                activateVote(userVote);
+            }
+        }
+
+        // Function to handle voting
+        function vote(rating) {
+            let counterElement = document.getElementById(`${rating}-counter`);
+            let currentCount = parseInt(counterElement.textContent);
+            let iconElement = document.getElementById(`${rating}-icon`);
+
+            if (userVote === rating) {
+                // If the user clicks the same vote again, undo the vote
+                counterElement.textContent = 0; // Vote reset to 0
+                iconElement.classList.remove('active'); // Remove color
+                localStorage.removeItem('userVote');  // Remove from localStorage
+                userVote = null;  // Clear active vote
+            } else {
+                // Remove previous vote (if any)
+                if (userVote) {
+                    let prevCounter = document.getElementById(`${userVote}-counter`);
+                    let prevIcon = document.getElementById(`${userVote}-icon`);
+                    prevCounter.textContent = 0; // Reset previous vote to 0
+                    prevIcon.classList.remove('active'); // Remove color from previous icon
+                }
+
+                // Apply new vote
+                counterElement.textContent = 1; // Set vote to 1
+                iconElement.classList.add('active'); // Apply active color
+                localStorage.setItem('userVote', rating);  // Store new vote in localStorage
+                userVote = rating; // Update active vote
+            }
+
+            // Send the vote to the server (backend can handle the counting)
+            sendVoteToServer(rating);
+        }
+
+        // Function to apply active state on page load if already voted
+        function activateVote(rating) {
+            let iconElement = document.getElementById(`${rating}-icon`);
+            let counterElement = document.getElementById(`${rating}-counter`);
+            counterElement.textContent = 1; // Set vote count to 1
+            iconElement.classList.add('active'); // Apply active color
+        }
+
+        function sendVoteToServer(rating) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '/news/vote', true);
+            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    console.log('Vote recorded for ' + rating);
+                }
+            };
+
+            xhr.send(JSON.stringify({ rating: rating }));
+        }
+
+        function loadVoteCounts() {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', '/news/vote-counts', true);
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    let counts = JSON.parse(xhr.responseText);
+                    document.getElementById('best-counter').textContent = counts.best;
+                    document.getElementById('good-counter').textContent = counts.good;
+                    document.getElementById('worst-counter').textContent = counts.worst;
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

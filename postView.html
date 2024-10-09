@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -428,6 +429,29 @@
                         এ হামলার লক্ষ্যবস্তু।
                     </article>
 
+                    <div class="local-padding"></div>
+
+                    <!-- Rating Section -->
+                    <fieldset class="rateNews-sun">
+                        <legend>রেট করুন</legend>
+                        <section class="rating-container">
+                            <div class="rating-item">
+                                <span id="best-icon" class="material-icons"
+                                    onclick="vote('best')">sentiment_very_satisfied</span>
+                                <p id="best-counter">0</p>
+                            </div>
+                            <div class="rating-item">
+                                <span id="good-icon" class="material-icons"
+                                    onclick="vote('good')">sentiment_satisfied</span>
+                                <p id="good-counter">0</p>
+                            </div>
+                            <div class="rating-item">
+                                <span id="worst-icon" class="material-icons"
+                                    onclick="vote('worst')">sentiment_very_dissatisfied</span>
+                                <p id="worst-counter">0</p>
+                            </div>
+                        </section>
+                    </fieldset>
                 </section>
             </aside>
 
@@ -548,7 +572,7 @@
         <!-- TAGS -->
         <section class="res-container m-auto tags-define-sun">
             <div class="pad-b--10 text--14">
-                এই ক্যাটাগরি থেকে আরও -
+                এই ক্যাটাগরি থেকে আরও পড়ুন -
             </div>
             <div class="f gap-05 f-wrap">
                 <a href="#" class="b-all-sun pad-lr--05 pad-tb--02 text-hov-Red text-White bg-cat">হিজবুল্লাহ</a>
